@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.15)  15 JAN 2018 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.15)  15 JAN 2018 18:29
 entering extended mode
 **./CahierDesCharges.tex
 (CahierDesCharges.tex
@@ -884,7 +884,7 @@ Here is how much of TeX's memory you used:
  16448 multiletter control sequences out of 15000+200000
  11825 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,400b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,11n,54p,477b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/flore/AppData
 /Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Users/f
 lore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb
@@ -893,7 +893,7 @@ sfbx1440.pfb><C:/Users/flore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/cm-super/sfbx1728.pfb><C:/Users/flore/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/cm-super/sfrm1200.pfb><C:/Users/flore/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
-Output written on CahierDesCharges.pdf (9 pages, 98399 bytes).
+Output written on CahierDesCharges.pdf (9 pages, 101042 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
