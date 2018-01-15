@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.15)  15 JAN 2018 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.15)  15 JAN 2018 21:44
 entering extended mode
 **./CahierDesCharges.tex
 (CahierDesCharges.tex
@@ -760,7 +760,22 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 ("C:\Users\flore\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
 r\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-))) (CahierDesCharges.aux)
+)))
+("C:\Users\flore\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.
+sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+("C:\Users\flore\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen154
+\extrarowheight=\dimen155
+\NC@list=\toks33
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+\everycr=\toks34
+\minrowclearance=\skip59
+) (CahierDesCharges.aux)
 \openout1 = `CahierDesCharges.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -783,16 +798,16 @@ LaTeX Info: Redefining \up on input line 21.
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
-\scratchdimen=\dimen154
+\scratchdimen=\dimen156
 \scratchbox=\box37
 \nofMPsegments=\count117
 \nofMParguments=\count118
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks35
 \MPscratchCnt=\count119
-\MPscratchDim=\dimen155
+\MPscratchDim=\dimen157
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks36
 )
 ("C:\Users\flore\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -878,13 +893,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2] [3] [4] [5] [6] [7] [8] [9] (CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
- 13148 strings out of 493303
- 258628 string characters out of 3129577
- 296516 words of memory out of 3000000
- 16448 multiletter control sequences out of 15000+200000
+ 13243 strings out of 493303
+ 259940 string characters out of 3129577
+ 299449 words of memory out of 3000000
+ 16536 multiletter control sequences out of 15000+200000
  11825 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,477b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,11n,54p,647b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/flore/AppData
 /Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Users/f
 lore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb
@@ -893,7 +908,7 @@ sfbx1440.pfb><C:/Users/flore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/cm-super/sfbx1728.pfb><C:/Users/flore/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/cm-super/sfrm1200.pfb><C:/Users/flore/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
-Output written on CahierDesCharges.pdf (9 pages, 101042 bytes).
+Output written on CahierDesCharges.pdf (9 pages, 105992 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

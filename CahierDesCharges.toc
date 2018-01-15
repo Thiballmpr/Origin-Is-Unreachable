@@ -5,16 +5,18 @@
 \contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation des membres}{3}
 \contentsline {section}{\numberline {3}Origine et Nature du projet}{4}
 \contentsline {subsection}{\numberline {3.1}Origine du projet}{4}
-\contentsline {subsection}{\numberline {3.2}Nature du projet}{4}
-\contentsline {subsubsection}{\numberline {3.2.1}Type de jeu}{4}
-\contentsline {subsubsection}{\numberline {3.2.2}Gameplay}{4}
-\contentsline {subsubsection}{\numberline {3.2.3}Sc\IeC {\'e}nario}{4}
+\contentsline {subsection}{\numberline {3.2}Nature du projet}{5}
+\contentsline {subsubsection}{\numberline {3.2.1}Type de jeu}{5}
+\contentsline {subsubsection}{\numberline {3.2.2}Gameplay}{5}
+\contentsline {subsubsection}{\numberline {3.2.3}Sc\IeC {\'e}nario}{5}
 \contentsline {section}{\numberline {4}Objet de l'\IeC {\'e}tude}{6}
 \contentsline {subsection}{\numberline {4.1}Int\IeC {\'e}r\IeC {\^e}t du projet en groupe}{6}
 \contentsline {subsection}{\numberline {4.2}Int\IeC {\'e}r\IeC {\^e}t individuels}{6}
 \contentsline {section}{\numberline {5}D\IeC {\'e}coupage du projet}{7}
-\contentsline {subsection}{\numberline {5.1}D\IeC {\'e}coupage du jeu : description des differentes parties}{7}
+\contentsline {subsection}{\numberline {5.1}D\IeC {\'e}coupage du jeu: description des diff\IeC {\'e}rentes parties}{7}
 \contentsline {subsection}{\numberline {5.2}R\IeC {\'e}partition des taches}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
 \contentsline {section}{\numberline {6}Ressources utilis\IeC {\'e}es}{8}
 \contentsline {subsection}{\numberline {6.1}Le mat\IeC {\'e}riel}{8}
 \contentsline {subsection}{\numberline {6.2}Les logiciels}{8}
