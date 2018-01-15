@@ -1,0 +1,916 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{titlesec}
+
+%Configuration des en-têtes des pages du rapport%
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead{}
+\setlength{\headheight}{15pt}
+\fancyhead[R]{\slshape \rightmark}
+\fancyhead[L]{}
+
+%Configuration de la première page%
+\title{\textbf { \huge{\underline{ISCAN}} \bigbreak  \large{ICR - reconnaissance intelligente de caractères}}}
+\author{Sébastien Faure}
+\date{11 septembre 2017 - 29 décembre 2017}
+
+\begin{document}
+\pagestyle{fancy}
+\pagenumbering{gobble}
+
+\maketitle
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+      \centering
+    \includegraphics[width=\linewidth]{aubay.png}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{epita.jpg}
+    \end{subfigure}
+\end{figure}
+
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\section{Introduction}
+\subsection{Remerciements}
+Pour commencer, je tiens à remercier mon maître de stage, M. PRINCE Xavier, pour m’avoir accueilli pour mon stage au sein d'Aubay, le partage de son expérience ainsi que la confiance accordée sur l'amélioration du projet.\bigbreak
+Je remercie également M. PORTALES Cyril pour son implication dans le déroulement de mon stage ainsi que pour son aide et son soutien.\bigbreak
+Je remercie enfin tous les stagiaires avec qui j’ai pu travailler : FEVRIER Julien, CAI Richard, FRENET BOURGOIN Guillaume et GOMIS Chris pour l'aide qu'ils m'ont apporté, ainsi que pour l’esprit d’équipe dont ils ont fait preuve.
+
+\subsection{Avant-propos}
+Dans le cadre de mon stage de fin du tronc commun de l’EPITA (Ecole Pour l’Informatique et les Technologies Avancées), j’ai participé à l’amélioration du projet I’SCAN, projet de la cellule Innovation d’Aubay pendant 4 mois, du 11 septembre 2017 au 29 décembre 2017.\bigbreak
+Aubay est une société de service numérique fondée en 1998 qui a su grandir en mettant un accent sur la qualité de leur intervention. Ils ont ainsi pu fidéliser des clients leaders du marché français, principalement dans les banques et assurances. Bien que majoritairement en France, Aubay est présente dans plusieurs pays européens. Plus de la moitié de ses effectifs reste en France. Avec aujourd’hui plus de 5000 collaborateurs, le groupe continu de croître et obtient un chiffre d’affaire de plus de 326 million d’euros en 2015 soit 9\% de croissance organique par rapport à l’année précédente.\bigbreak
+La cellule Innovation, qui m’a accueilli pour ce stage, a pour objectif de trouver une application durable aux nouveautés d’aujourd’hui et donc conduire des travaux innovants. Elle permet à Aubay de rester à jour sur les nouvelles méthodes, les nouvelles technologies et les nouvelles applications du monde numérique. C’est ici qu’ont commencé les premiers projets du groupe utilisant le machine learning ainsi que sur le Blockchain ou l’IoT. Elle est dirigée par mon maître de stage, M. PRINCE Xavier, épaulé par M. PORTALES Cyril dans l’encadrement des équipes d’Aubay Innov’.\bigbreak
+L’équipe du projet I’Scan était composée, à mon arrivée, de 3 stagiaires provenant tous d’école d’ingénieurs en informatique. M. CAI Richard, étudiant EPITA 2019 aussi en stage sur ce projet, et moi avons été intégré rapidement au sein de cette équipe, que ce soit du côté professionnel ou humain. Nous travaillions dans un open-space avec plusieurs autres équipes de stagiaires travaillant sur des projets différents. La disposition de notre environnement de travail nous a permis une communication rapide et efficace de même qu’une facilité pour recevoir ou proposer son aide. MM. PORTALES et PRINCE se tenaient toujours au courant de l’avancement du projet et étaient prêt à répondre à nos questions. Durant les réunions régulières que nous avions avec eux, nous mettions au clair l’avancé des décisions prises lors de la précédente réunion, puis nous cherchions une direction à prendre pour la suite. La réflexion était commune entre les encadrants et les stagiaires mais la réalisation nous a toujours été confiée.\bigbreak
+Le projet I’SCAN est un projet de reconnaissance intelligente de caractères (de l’anglais Intelligent Character Recognition - ICR). Le but de ce projet est la digitalisation des textes manuscrits à partir d’une image ou d’une vidéo. Ce projet mené depuis plusieurs années. Parmi les tâches évoquées lors des entretiens, il y avait l’amélioration du système de découpage du texte en ligne puis de chaque ligne en mots et enfin de chaque mot en lettres. Ce traitement est nécessaire pour le travail du réseau de neurones qui est capable de reconnaître uniquement un caractère à la fois. Afin d’être capable de reprendre le projet, des compétences en développement C++ étaient nécessaire en plus d’une capacité de réflexion pour comprendre les méthodes déjà utilisées dans le projet ou les méthodes que seraient implémentées dans le projet.\bigbreak
+\bigbreak
+
+Lors de mon arrivée sur le projet, une version fonctionnelle donnant de premiers résultats existaient déjà. Le programme était capable d’appliquer toutes les modifications nécessaires à l’image pour la traiter convenablement : recadrer et identifier le texte puis binarisation de l’image. Ensuite le texte est découpé pour obtenir des images ne contenant qu'un caractère. Une série de caractéristique est extraite de l’image de chaque caractère pour la comparer et pouvoir, grâce au réseau de neurones, classer le caractère parmi ceux qui ont des caractéristiques similaires. On peut alors en conclure sur la probabilité que ce caractère est telle lettre ou tel chiffre.\bigbreak
+Les stagiaires que nous avons rejoints venaient d’améliorer l’identification des lettres en passant de la méthode « k-nearest neighbors » (KNN) vers un réseau de neurones à convolution (CNN). \bigbreak
+Actuellement intéressé par la majeure SCIA (data SCience et Intelligence Artificielle) de l’EPITA, pouvoir travailler sur un logiciel sur le traitement d’image utilisant un réseau de neurones me permettra d’obtenir une première expérience dans ce domaine.\bigbreak
+Ce rapport présentera d’abord l’entreprise et le projet à mon arrivée. Sera ensuite présenté mon apport personnel au projet avant l’interprétation et la critique des résultats obtenus.
+
+\newpage
+
+\section{Présentation de l'entreprise}
+\subsection{Le secteur d'activité}
+Aubay est une Entreprise de Services du Numérique (ESN). Une ESN (anciennement SSII) est une société de service spécialisée dans l'informatique et les nouvelles technologies. L'entreprise peut compter sur ses experts pour accompagner voire réaliser les sociétés clientes dans leur projet. Pour cela, elle peut compter sur ses nombreux experts pour répondre aux différents besoins des missions d'une ESN (conseil, conception et réalisation d’outils, maintenance ou encore formation).\\
+Les ESNs répondent aux besoins d'externalisation des expertises et des projets informatiques de certaines entreprises.
+\bigbreak
+Aubay intervient, depuis sa constitution, uniquement auprès d’acteurs « Grands Comptes » et s’est tout particulièrement imposé sur le marché de la banque et de l’assurance. Aubay dispose de références majeurs chez les plus gros acteurs de ces secteurs. En effet, le secteur bancaire représente 42\% du chiffre d’affaire du groupe, et les assurances près de 25\%. A cela s’ajoute les services et l’industrie qui en représentent un dixième chacun, le secteur public et la télécommunication quant à eux correspondent à plus de 5\% chacun, finalement le reste du chiffre d’affaire provient du e-commerce.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.7\linewidth]{{"secteurs chiffre d'affaire"}.png}
+    \caption{Répartition du chiffre d'affaires du groupe Aubay par secteur}
+\end{figure}
+Ainsi parmi les principaux clients de l’entreprise, on peut citer : BNP Paribas, Groupe Crédit Agricole, Allianz, AXA, Groupe BPCE, Société Générale, Poste Italiane, Orange, SNCF, Intesa SAN PAOLO, Vodafone, Grupo Santander, Generali, ENGIE et BBVA.
+
+\subsection{L'entreprise}
+Présente depuis toujours dans plusieurs pays européens, Aubay ne cesse de grandir et a su s'implémenter dans de plus en plus de pays étranger.
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.7\linewidth]{{"pays chiffre d'affaire"}.png}
+    \caption{Répartition du chiffre d'affaires du groupe Aubay par filiale}
+\end{figure}
+
+Du Conseil à tout type de projet technologique, Aubay accompagne la transformation et la modernisation des systèmes d’information.\bigbreak
+En outre le nombre de collaborateurs entre les années 2012 et 2016 a presque doublé. Aubay compte aujourd’hui près de 5 500 consultants dont plus de 2 200 en France.En 2017, l’entreprise a recruté 1200 collaborateurs en Europe dont 700 en France issus des meilleures écoles d’ingénieur, de commerce et des grandes universités.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.7\linewidth]{{"effectif aubay"}.png}
+    \caption{Évolution des effectifs du groupe Aubay}
+\end{figure}
+
+\newpage
+On constate que la croissance du nombre de collaborateurs dans l’entreprise est liée à celle du chiffre d’affaire, en effet la croissance de ce dernier depuis 2012 n’est jamais passée sous les 10\% et a connu en 2014 un pic à 15\%. Ainsi en 2012, le chiffre d’affaire s'estimait à environ 190.5 millions d’euros, puis en 2013 il est passé à 211.1 millions d’euros, pour atteindre en 2014 près de 243.3 millions d’euros. S’en est suivit en 2015 une augmentation jusqu’à 273.8 millions d’euros, pour en 2016 atteindre plus de 300 millions d’euros, soit une augmentation de 12\% par rapport à l’année précédente.
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.7\linewidth]{{"evolution chiffre d'affaire"}.png}
+    \caption{Évolution du chiffre d'affaires du groupe Aubay}
+\end{figure}
+
+\subsection{La cellule Innovation}
+
+Une des grandes forces d’Aubay est que les solutions que l’entreprise apporte à ses clients sont des services innovants s’adaptant à leurs demandes. Ceci est aujourd’hui possible grâce aux projets menés au sein de la Aubay Innov’.\bigbreak
+Cette cellule Innovation réunit des architectes et de experts en charge de l’organisation et de la conduite de travaux innovants autour des technologies digitales de demain. Crée en 2013, la cellule est aujourd’hui dirigée par Xavier PRINCE, mon maître de stage. C’est dans cette partie de l’entreprise que s’est déroulé mon stage. On y retrouve plusieurs équipes menant des projets aux thématiques différentes dans un même environnement de travail.\bigbreak
+Lors de sa création, cette dernière a reçu comme mission « d’acquérir la connaissance et le savoir-faire pour bâtir des solutions innovantes pérennes et adaptées aux besoins futurs ».  Grâce à l’incubation et la réalisation des idées des membres d’Aubay Innov’ en partenariat avec des experts, des laboratoires et les écoles, la cellule Innovation peut remplir son rôle.\bigbreak
+\begin{figure}[h]
+\centering
+    \includegraphics[width=\linewidth]{{"Organisation Aubay France"}.png}
+    \caption{Organisation d'Aubay France}
+\end{figure}
+Les projets en cours cherchent à appliquer des concepts comme le Big Data, la réalité augmentée, l’analyse de données de parcours clients sur site web (Web Analytics) mais encore l’IoT (Internet of Things) et le Blockchain. \bigbreak
+C’est parmi ces nouvelles applications que se trouve le projet I’Scan, le sujet de mon stage.
+
+\subsection{Le projet I'Scan au sein de la cellule}
+Le projet I’Scan était mené par 4 autres stagiaires de différentes écoles quand je l’ai rejoint.\bigbreak
+Le projet I’Scan est l’un de nombreux sujets de recherche de la cellule Innovation. Présent depuis plusieurs années, les techniques utilisées ont pu progresser au cours du temps. Les travaux sur ce projet permettent de de rester à jour sur plusieurs domaines et de connaître les dernières méthodes utilisées.\bigbreak
+Le premier est le traitement de l’image, plus précisément pour la reconnaissance de texte dans l’image. De nouveaux articles scientifiques continuent d’être publiés par exemple sur le découpage du texte en ligne, notamment avec de nouvelles techniques pour identifier des lignes qui se retrouvent très serrées et qui se chevauchent. Les méthodes les plus avancées permettent de reconnaître des lignes de textes orientés différemment sur l’image (jusqu’à des lignes de textes parfaitement perpendiculaires) ou du texte écrit en arc-de-cercle. Le projet I’Scan se concentre pour l’instant sur des textes écrits clairement et avec des lignes bien séparées et horizontales. L’un des objectifs à court termes étant d’obtenir de très bons résultats sur ce type de textes avant d’essayer de traiter des textes où les auteurs ont été moins appliqués.\bigbreak
+Le second est les réseaux de neurones. Le \textit{machine learning} a trouvé parmi ses premières applications l’identification d’objets dans une image. I’Scan est la première utilisation d’une méthode de \textit{machine learning} au sein d’Aubay avec l'implémentation d'un algorithme de k-NN (\textit{k Nearest Neighbors}. L'utilisation d'une méthode de \textit{deep learning} orientée traitement de l'image avec un CNN (\textit{Convolutional Neural Network} ou Réseaux de neurones à convolution) est actuellement en étude. Le projet permet donc de rester à l’écoute des nouveautés dans ce milieu riche, jeune et qui vit de grosses évolutions régulièrement.
+
+\newpage
+\section{Le travail effectué}
+\subsection{Le cahier des charges}
+Le but est d’améliorer et de transformer la façon dont les tableaux blancs sont utilisés et cela dans n’importe quel environnement (écoles et cours en ligne, salles de réunions et réunions télétransmise, etc.).\bigbreak
+Le cœur du projet est un logiciel capable de convertir une écriture manuscrite et des schémas en une version numérisée et modifiable. Cela implique le découpage de l’image capturée en formes simples (carrés, triangles, cercles, lignes, etc.) et la reconnaissance du texte (sous plusieurs formes typographiques comme du texte tapé sur ordinateur, l’écriture manuscrite, majuscules et minuscules, etc.) puis la reconstruction de ceci en un fichier numérisé sous différents formats.\bigbreak
+Plusieurs améliorations futures sont envisageables :\bigbreak
+\begin{itemize}
+\item Exporter l’image sous plusieurs formats numériques
+\item Détection et restitutions des couleurs
+\end{itemize}
+\bigbreak
+Il a été décidé d’implémenter le projet avec une structure «client lourd». Cela requiert l’installation du logiciel par l’utilisateur (à l’opposé d’un « client léger », utilisable depuis un navigateur Web).\bigbreak
+Le logiciel est développé en C et C++. Ce choix a été fait pour des raisons de performances. Python a été utilisé pour réaliser des tests de réseau de neurones à convolution avec la bibliothèque Tensorflow. Si l'efficacité de cette nouvelle méthode est vérifiée, le réseau de neurones sera implémenté en C++ avec lui aussi la bibliothèque TensorFlow.\bigbreak
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{{"photo tableau"}.jpg}
+      \caption{Photo originale}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{{"resultat souhaite"}.png}
+      \caption{Résultat souhaité}
+    \end{subfigure}
+    \caption{Objectif du projet I'Scan}
+\end{figure}
+
+\newpage
+\subsection{Fonctionnement global du projet}
+Actuellement, le projet se concentre sur la partie reconnaissance de caractères du cahier des charges, le gros du travail étant de reconnaître les caractères de l'écriture manuscrite.\\ 
+Ce schéma montre les différentes étapes du projet et l’ordre dans lequel elles sont exécutées. Lors de la description de chacune des tâches que j’ai effectuées, je me référerais à la numérotation présente ici afin de pouvoir mieux situer la tâche dans le projet.
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.9\linewidth]{{"etapes projet"}.png}
+    \caption{Les différentes étapes du projet I'Scan}
+    \label{etapes_projet}
+\end{figure}
+
+\newpage
+\subsection{Affichage clair du traitement des espaces}
+Lors du découpage des lignes en mots (étape 4, figure \ref{etapes_projet}), la méthode utilisée implique de trouver les blobs des lettres. Un blob est un groupe de pixel connecté qui partage une propriété commune. Dans notre cas, l’image est binarisée. C’est-à-dire que les pixels ne prennent que des valeurs binaires (0 le pixel est noir, 1 le pixel est blanc). La fonction de blob de la bibliothèque OpenCV va donc suivre les pixels noirs connectés et va ainsi tracer des zones autours de chaque lettre (figure \ref{blobs_lettres}).\bigbreak
+La méthode utilisée regroupait ensuite les blobs proches ou qui se superposaient pour créer des blobs autour des mots (figure \ref{blobs_mots}).\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=1\linewidth]{{"blobs autour des lettres"}.png}
+    \caption{Blobs autour des lettres}
+    \label{blobs_lettres}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=1\linewidth]{{"blobs autour des mots"}.png}
+    \caption{Blobs autour des mots}
+    \label{blobs_mots}
+\end{figure}
+
+\newpage
+Cette méthode des blobs n'a pas donné les résultats attendus. Il fallait donc trouver une autre solution à ce problème.\bigbreak
+La nouvelle méthode est une méthode en phase de recherche sur laquelle travaillait les membres de l'équipe à mon arrivée sur le projet.\\
+Cette méthode utilise un histogramme horizontal sur toute la ligne. Un histogramme représente la somme des pixels de chaque colonne. Il peut être visualisé ainsi :
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.6\linewidth]{{"histo vertical"}.png}
+    \caption{Histogramme vertical}
+\end{figure}
+
+\newpage
+Chaque espace vide, où il n’y a aucun pixel sur la colonne, situé entre 2 pics de valeurs correspond à un espace entre 2 caractères (3 espaces dans la figure 10). Le but est ensuite de classer ces espaces en 2 catégories : espaces inter-mots et espaces inter-lettres. Pour cela, on utilise la largeur de ces espaces puis on calcule 2 barycentres où celui regroupant les plus grands espaces est le barycentre des espaces inter-mots et l’autre celui des espaces inter-lettres.
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.9\linewidth]{{"barycentres"}.png}
+    \caption{Représentation des espaces et des barycentres}
+\end{figure}
+
+La première solution était de calculer la moyenne des tailles des espaces afin de séparer les deux groupes.
+Malheureusement, la classification des espaces n’est pas si simple. En effet, il arrive que des espaces entre caractères soit plus grand que des espaces mots. A cause de cela, certains espaces inter-lettres se retrouvent de tailles supérieures à la moyenne et certains espaces inter-mots se retrouvent de tailles inférieures à la moyenne.\bigbreak
+
+Il a donc été choisi de travailler avec une zone d’incertitude pour les valeurs centrales.\\
+Autour de chaque barycentre, nous calculons un espace qui a pour centre la position de ce barycentre et pour largeur, deux fois l'écart-type de ce barycentre. Les espaces positionnés dans l'une de ces zones est rattaché au barycentre de cette zone. Tant qu'il reste plus de 20\% des espaces qui ne sont pas rattachés nous doublons la taille de chaque zones en vérifiant qu'elles ne se croisent jamais. \bigbreak
+
+Le développement de la méthode de colorisation permet une analyse visuelle rapide de la classification des zones d'incertitudes. Cette affichage n'intervient en rien dans le processus de traitement des images. Cela nous offre l'opportunité de savoir si il y a beaucoup de zones d'incertitudes ou pas et ainsi décider si nous gardons cette nouvelle méthode.\bigbreak
+
+\begin{figure}[!h]
+\centering
+      \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\linewidth]{{"ligne coloree 3"}.png}
+        };
+        \end{tikzpicture}
+    \caption{Résultat de la colorisation sur une ligne}
+\end{figure}
+
+\begin{itemize}
+    \item Les zones jaunes sont les espaces inter-mots
+    \item Les zones rouges sont les espaces inclassables (espaces incertains)
+    \item Les zones bleues sont les espaces inter-lettres
+\end{itemize}
+
+\bigbreak
+On obtient ici le résultat sur une ligne. Après avoir observé les résultats sur 24 textes, les résultats étaient plutôt satisfaisants. On a ainsi pu remarquer que les ponctuations étaient une situation récurrente qui donnait des espaces incertains. Mais beaucoup d’espaces incertains étaient encore assez distincts pour être classé.\bigbreak
+Nous avons donc choisi de diviser la zone d’incertitude en 3 parties :
+\begin{itemize}
+    \item Zone d’espaces incertain-lettres (espaces d’abord considérés comme incertains mais de taille proche des espaces inter-lettres)
+    \item Zone d’incertitude
+    \item Zones d’espaces incertain-mot (espaces d’abord considérés comme incertains mais de taille proche des espaces inter-mots)
+\end{itemize}
+
+\bigbreak
+On obtient ainsi :
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.9\linewidth]{{"zones incertitudes"}.png}
+    \caption{Codes couleurs de la fonction de colorisation}
+\end{figure}
+
+J’ai donc ensuite participé à l’amélioration de la fonction de colorisation afin d’obtenir un résultat correspondant aux 5 zones maintenant délimitée.
+
+\begin{figure}[!h]
+\centering
+      \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\linewidth]{{"ligne coloree 5"}.png}
+        };
+        \end{tikzpicture}
+    \caption{Résultat de la colorisation sur une ligne avec 5 couleurs}
+\end{figure}
+
+Comme nous travaillons sur le découpage de ligne en mots, le traitement est réalisé sur les images ligne par ligne. La fonction de colorisation nous donnait ses résultats ligne par ligne. Pour obtenir une sortie plus proche du texte de départ, j’ai ajouté une nouvelle partie à la fonction permettant d’avoir toutes les lignes sur une même image. La comparaison entre le texte d’origine et sa version colorée est donc plus simple (cf. annexe figure \ref{annexe:texte_color}) et permet de rapidement identifier les erreurs de classification des espaces (cf. annexe figure \ref{annexe:coloration_obs}).\bigbreak
+Cette fonction d'analyse est utilisé uniquemement si l'on souhaite étudier les résultats. Elle est alors appelée lors de l’étape 4 du projet (figure \ref{etapes_projet}) et permet de mieux comprendre les erreurs potentielles car cette catégorisation est importante pour la reconnaissance des mots (étape 7 de la figure \ref{etapes_projet}).
+
+\subsubsection{Interprétation et critiques des résultats}
+Grâce à l'analyse des résultats, nous avons gardé la méthode de séparation de mots par histogramme. En effet, sur la totalité de nos textes, il restait que très peu de zones rouges (complètement incertaine). Les autres membres du groupes ont ainsi pu utiliser ces résultats pour répercuter le calcul de ces différents types d'espaces sur la suite du traitement et obtenir une amélioration de la reconnaissance globale. Les zones ont permis de préférer l'appel de certaines fonctions dans la suite du traitement et mettre en avant leurs résultats par rapport aux autres. Dans le cas des zones rouges, aucune fonction ne peut être avantagée.
+
+\newpage
+\subsection{Amélioration de la segmentation des lignes}
+\subsubsection{Description du sujet de recherche}
+Lors de l’étude des textes colorisés grâce à la fonction expliquée précédemment, nous avons pour observer plusieurs textes donnant des résultats complètement inattendus et inexploitables. On peut observer 2 problèmes différents :
+
+\begin{itemize}
+    \item 2 lignes sont considérées comme une seule et ne sont pas segmentée (cela peut ne concerner qu’une partie de la ligne)
+    \item Une ligne est considérée comme 2 lignes et est découpée alors qu’il ne fallait pas
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[width=0.9\linewidth]{{"erreur segmentation"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Exemple d'erreur de segmentation posant problème dans le texte de l'annexe figure \ref{annexe:coloration_corr}}
+\end{figure}
+
+Dans cet exemple extrait de l’annexe figure \ref{annexe:coloration_corr}, on peut voir 3 lignes mises en avant par un découpage rose fait à la main sur l’image sortie par le programme.\bigbreak
+Le premier type de problème entre des erreurs comme le mot « C’est » de la ligne 1 qui empêche de détecter un espace inter-mots entre le mot « sans » et le mot « cesse » juste en dessous sur la ligne 2.\bigbreak
+Le second type de problème entraine des espaces inter-mots beaucoup trop grand, comme entre le mot « MAGNIFIQUE » de la ligne 3 et le bout de mot « passes » de la ligne 2, considérés sur la même ligne par le logiciel à cause de l’erreur de segmentation.\bigbreak
+Cet espace anormalement grand engendre des résultats erronés dans le calcul de barycentre, faisant de cet espace le seul compris dans l’intervalle des espaces inter-mots sur le texte (annexe figure \ref{annexe:coloration_corr}). Pour contourner rapidement cette erreur, il a été choisi d’implémenter une fonction de suppression des valeurs aberrantes pour calculer les barycentres sans ces espaces qui ne devraient pas exister. La fonction supprime le plus grand espace tant que ce dernier est 2 fois plus large que l’un des 3 plus grands espaces excepté lui-même et continue jusqu’à qu’elle ne supprime aucun espace. Les valeurs aberrantes n’étant que trop grandes, il n’y a pas besoin d’appliquer un traitement semblable aux petites valeurs.\bigbreak
+Cette altération est souvent utilisée en statistique (enlever les valeurs extrêmes pour ne garder que les valeurs correspondant à la majorité des réponses) mais ne corrige pas les erreurs de segmentation. Cela permet néanmoins de pouvoir traiter les autres lignes avec des espaces classés proche de ce qui est attendu et de pouvoir continuer la reconnaissance sur une partie du texte.\bigbreak
+
+\subsubsection{Méthode dichotomique}
+\textbf{Recherche et travail effectué}\bigbreak
+
+Pour essayer de corriger cette segmentation, nous avons pensé à une nouvelle méthode. Avec cette nouvelle méthode, nous voulons nous assurer que la segmentation ne coupe aucun caractère. En effet, plusieurs erreurs provenaient de segmentation découpant une lettre en 2 car pour elle, traverser quelques pixels de texte n’était pas gênant s’il n’y avait pas de meilleure solution. La première étape est de travailler avec les blobs des mots au lieu du texte directement. Ainsi nous obtenu une forme grossière du texte permettant de bien distinguer les zones vides.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[width=0.9\linewidth]{{"blobs remplace lettres"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Les blobs remplacent les lettres (extrait de l'annexe figure \ref{annexe:texte_blobs})}
+\end{figure}
+
+Notre algorithme fonctionne de manière récursive sur des portions de l'image et est séparé en 2 parties et qui s'arrêtera lorsque la partie traitée ne contient qu'une seule ligne.\\
+Jusqu’ici, cette fonction obtenait son résultat en calculant un ratio entre la moyenne des hauteurs des blobs compris dans l’image et le nombre de rangée de pixels sur l’image. Ce ratio devait être inférieur à une valeur choisie arbitrairement, affinée après plusieurs tests.\bigbreak
+
+Cependant, avoir une valeur entrée « en dure » dans le code est souvent source d’erreur sur des cas spécifiques. De ce fait, lorsque que nous sommes en bout de ligne et seul un bout de ligne est présent sur notre image, la fonction se trompe.\bigbreak
+C’est pour cela qu’une nouvelle version de cette fonction en cours de développement avec l’utilisation d’histogrammes verticaux. 
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[draw,line width=2pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.7\textwidth]{{"histo bleu"}.png}
+        };
+        \end{tikzpicture}
+      \caption{Histogramme de plusieurs lignes}
+      \label{img:histobleu}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[draw,line width=2pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.7\textwidth]{{"histo rouge"}.png}
+        };
+        \end{tikzpicture}
+      \caption{Histogramme d'une ligne}
+    \end{subfigure}
+    \caption{Affichage de l'histogramme vertical avec représentation de la moyenne}
+\end{figure}
+
+Sur l'image de la figure \ref{img:histobleu}, il est facile d'identifier qu'il y a plusieurs ligne: nous observons un zone nulle entre les deux piques. Mais il arrive souvent que cela ne soit pas le cas. Lorsque des caractères de lignes différentes sont sur la même rangée de pixels, ils se confondent sur l'histogramme vertical et nous n'avons plus de zones nulles entre les deux pics.\bigbreak
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[draw,line width=2pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[height=0.2\textheight]{{"lignes chevauche"}.png}
+        };
+        \end{tikzpicture}
+      \caption{Exemple de caractères de différentes lignes qui se chevauchent}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[draw,line width=2pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.7\textwidth]{{"histo bleu sans vide"}.png}
+        };
+        \end{tikzpicture}
+      \caption{Histogramme de plusieurs lignes où des caractères se chevauchent}
+    \end{subfigure}
+    \caption{Exemple de cas avec chevauchement des lignes}
+\end{figure}
+
+Il faut donc être capable de détecter les maximums locaux correspondant aux/à la ligne(s) présente(s) sur l’image. La méthode était encore en cours de développement. Ici, le marquage noir vertical qui apparaît environ au milieu de chaque histogramme correspond à la moyenne des valeurs de cet histogramme. Nous considérons qu'une portion d'image contient deux lignes si il y a plus deux zones distinctes qui dépassent la moyenne.\bigbreak
+	
+L'objectif est d'obtenir à chaque fois des portions ne comportant qu'une ligne.\\
+Pour arriver à ce résultat, nous évitons les lignes qui se chevauchent en découpant verticalement en 2 parties égales des images comportant plusieurs lignes. Nous pratiquerons ensuite le même traitement sur chaque moitié pour arriver à segmenter notre texte.\bigbreak
+
+Notre méthode se séparent en deux fonctions: la première qui va trouver les séparations horizontales vides de texte entre les lignes et la seconde qui reliera ces segments.\bigbreak
+L’algorithme de recherche fonctionne ainsi :
+\bigbreak
+\begin{itemize}
+    \item \textbf{Si} l’image ne contient qu’une ligne :
+        \begin{itemize}
+            \item On dessine un segment qui correspond au bord bas de l’image
+        \end{itemize}
+    \item \textbf{Sinon} :
+        \begin{itemize}
+            \item On cherche toutes les rangées horizontales de pixels vides dans l’image
+            \item \textbf{Si} on en trouve aucune :
+            \begin{itemize}
+                \item On sépare en 2 parties verticales notre image et on rappelle cette fonction avec chacune des moitiés
+                \item On relie les lignes résultantes de l’appel sur la moitié gauche avec les lignes résultantes de l’appel sur la moitié droite (appelle de la fonction décrite ensuite)
+            \end{itemize}
+        \item \textbf{Sinon} :
+        \begin{itemize}
+            \item On découpe notre image selon les rangées horizontales vides trouvées et on rappelle notre fonction sur chacune des portions (une portion est la zone entre 2 rangées de pixels vides)
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\bigbreak
+Les images évoquées ci-dessous sont les 2 moitiés verticales crées lorsque nous avons plusieurs lignes et qu’on ne peut tracer de rangée de pixels vides. La fonction de liaison fonctionne ainsi :
+\bigbreak
+\begin{itemize}
+    \item \textbf{Si} l’image de droite ne donne aucun segment :
+    \begin{itemize}
+        \item On continue les séparations du côté gauche pour qu’elles atteignent le bord droit du côté droit et on ajoute ces segments agrandis à la liste de résultat
+    \end{itemize}
+    \item \textbf{Sinon} :
+    \begin{itemize}
+        \item \textbf{Si} il y a plus de ligne d’un côté :
+        \begin{itemize}
+            \item on remplit la liste des rangées vides du côté ayant le moins de rangées vide avec des rangées correspondant au bas de l’image
+        \end{itemize}
+        \item \textbf{Tant que} il reste des lignes à relier :
+        \begin{itemize}
+            \item On prend le premier segment de chaque côté et on les relie
+            \item On ajoute les trois segments (le segment de gauche, la liaison, le segment de droite) comme un seul segment dans la liste de résultat
+        \end{itemize}
+    \end{itemize}
+    \item On retourne la liste de résultat
+\end{itemize}
+\bigbreak
+
+\bigbreak\textbf{Interprétation et critiques des résultats}\bigbreak
+
+Cette méthode a cependant été abandonnée.\bigbreak
+En effet, cette méthode est efficace pour la séparation de 2 lignes de textes différentes puisqu'elle s'arrange pour ne découper que des zones sans textes écrits. Malheureusement si un texte est penché (les lignes du textes ne sont pas parallèles avec le bord de la page), la méthode a beaucoup de mal à relier les segments entre eux.\\
+La modification apporté à la fonction isMultipleLines() n’a pas donné les résultats attendus et requis.\\
+La totalité de cette méthode repose sur la décision prise par cette fonction mais cette dernière n'arrive pas à de bons résultats.\bigbreak
+A cause de ce blocage, la segmentation a toujours trouvé des lignes fausses, coupant des lignes de textes, créant des lignes vides, etc.\\
+L’amélioration de la segmentation des lignes reste un axe de recherche qui pourrait permettre d'avoir de meilleurs résultats.
+Durant la réunion qui a conclu l’abandon de cette méthode, une réflexion commune a abouti au développement de la méthode Histogramme-A*, documentée ci-après.\bigbreak
+
+\newpage
+\subsubsection{Méthode Histogramme-A*}
+\textbf{Description du sujet de recherche et expérimentations}\bigbreak
+
+Le principe est d’utiliser au maximum les histogrammes verticaux pour continuer de tracer notre segmentation entre les lignes. Ainsi, lors du calcul d’un histogramme vertical local, le programme continuera sa segmentation sur la première ligne blanche située entre 2 pics sur l’histogramme. Le tracé trouvé continu de progresser tout droit (à l’horizontal) jusqu’à qu’il entre en collision avec un pixel de texte. Afin de contourner ce caractère, la fonction calculera un nouvel histogramme local.\bigbreak
+Si ce dernier ne permet pas de trouver un espace blanc entres 2 sommets, le programme utilisera l’algorithme A* (cf. Choix par A*) entre le dernier point enregistré et un point calculé plus loin, qui prendra en compte la pente du texte. L’algorithme A* permettra de contourner les lettres qui se chevauchent (empêchant l’histogramme de trouver une solution) et reliera ces 2 points.\bigbreak
+
+\bigbreak\textbf{Séparation du texte en paragraphes}\label{texte_en_paragraphe}\bigbreak
+La première étape est la séparation du texte entier en différent paragraphe. Pour cela, le texte est découpé dès qu’une rangée de pixels blancs est trouvée.\bigbreak
+L’algorithme applique la suite de son traitement sur chacun des paragraphes. Le découpage se fait sur la première rangée trouvée (dans le cas où plusieurs rangées sont présentes à la suite).
+
+\bigbreak\textbf{Début de la segmentation (début des lignes)}\bigbreak
+Cette fonction va déterminer si le paragraphe actuellement traité contient une ou plusieurs lignes. Il utilisera d’abord deux histogrammes verticaux sur les premiers 2\% et 10\% de l’image (depuis le bord gauche). Pour que ce résultat soit cohérent, on considère qu’une personne écrivant de gauche à droite (comme en français) commencera toujours ses lignes avec un espace entre elles, même si elles ont tendances par la suite à se rapprocher.
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.7\linewidth]{{"histo noir"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Exemple d'espaces entre 2 lignes sur un histogramme vertical}
+\end{figure}
+
+On obtient donc un début de ligne pour chaque espace blanc entre deux sommets de l’histogramme. Pour commencer, le début de ces lignes commencera au plus haut de chaque espace blanc (juste en dessous du texte détecté). Par la suite, l’algorithme sera modifié pour commencer au milieu de cet espace blanc. Nous comparerons ensuite les résultats et garderons la meilleure méthode.\bigbreak
+Une fois nos débuts de segmentations trouvés, le but est de les faire traverser le texte jusqu’au bord droit.
+Ainsi, chaque début de ligne sera d’abord continué de manière horizontal jusqu’à que le tracé rencontre un pixel appartenant au texte.
+
+\bigbreak\textbf{Choix par histogramme}\bigbreak
+Lorsque la segmentation est arrêtée par un pixel de caractère, un histogramme vertical local est calculé pour trouver un espace blanc proche.\bigbreak
+Si un pixel de texte est trouvé entre le point de collision et le point donné comme solution par l’histogramme, le résultat est considéré comme erroné et la fonction renverra une valeur particulière notifiant de cette erreur. Cette vérification permet d’éviter de couper des caractères ou des mots lors du découpage en ligne.\bigbreak
+Si l’histogramme ne trouve aucun espace blanc (dans le cas où les lignes se chevauchent), la fonction de calcul par histogramme renverra aussi la valeur d’erreur.\bigbreak
+Dans le cas où nous réceptionnerons la valeur d’erreur, nous utiliserons l’algorithme A* pour prendre une décision
+
+\newpage\textbf{L'algorithme A*}\bigbreak
+L’algorithme de recherche A* (prononcé « A étoile » ou « A star » en anglais) est algorithme de recherche de chemin dans un graphe entre un nœud initial et un nœud final tous deux donnés. A* calcul le meilleur chemin entre les 2 nœuds. Le meilleur chemin dépend d’une fonction de coût, le résultat de l’algorithme étant le chemin au coût le plus faible.\bigbreak
+L'idée est très simple : à chaque itération, on va tenter de se rapprocher de la destination, on va donc privilégier les possibilités directement plus proches de la destination, en mettant de côté toutes les autres.\bigbreak
+Toutes les possibilités ne permettant pas de se rapprocher de la destination sont mises de côté, mais pas supprimées. Elles sont simplement mises dans une liste de possibilités à explorer si jamais la solution explorée actuellement s'avère mauvaise. En effet, on ne peut pas savoir à l'avance si un chemin va aboutir ou sera le plus court. Il suffit que ce chemin amène à une impasse pour que cette solution devienne inexploitable.\bigbreak
+L'algorithme va donc d'abord se diriger vers les chemins les plus directs. Et si ces chemins n'aboutissent pas ou bien s'avèrent mauvais par la suite, il examinera les solutions mises de côté. C'est ce retour en arrière pour examiner les solutions mises de côté qui nous garantit que l'algorithme nous trouvera toujours une solution (si tenté qu'elle existe, bien sûr).\bigbreak
+On peut donc lui donner un terrain avec autant d'obstacles qu'on veut, aussi tordus soient-ils, s'il y a une solution, A* la trouvera.\bigbreak
+
+\bigbreak\textbf{Choix par A*}\bigbreak
+
+Afin de bien comprendre cette partie, il est nécessaire de connaître le fonctionnement de l'algorithme A*. Il est expliqué dans la sous-section précédente (cf. algorithme A*).\bigbreak
+L’algorithme A* utilise 3 éléments pour déterminer son choix :
+
+\begin{itemize}
+    \item Une position de départ qui sera le dernier point représentant une variation de hauteur (Point de Variation de Hauteur) dans le tracé de segmentation actuel. Le premier PVH est toujours le point le plus à gauche de notre début de ligne.
+    \item Un point d’arrivée qui sera calculé en fonction de la pente du texte par rapport au précédent PVH.
+    \item Une matrice de pixel qui représentera l’image du paragraphe actuellement traitée qui sera utilisé comme un graphe, où seuls les pixels qui n’appartiennent pas à du texte seront des nœuds du graphe.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{HVPs.png}
+        };
+    \end{tikzpicture}
+    \caption{Exemple de Points de Variation de Hauteur (PVH)}
+    \label{img:PVHs}
+\end{figure}
+
+La méthode A* renverra une liste de PVH qui sera le chemin à suivre par le tracé de segmentation entre le point de départ et le point d’arrivée. Dans le cas où A* ne trouve pas de solution, le paragraphe est considéré comme ne contenant qu’une ligne de texte. \bigbreak
+Le résultat ne présente que les PVHs de la solution pour ne garder que les points importants de la segmentation.
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"situation Astar"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Exemple de situtation d’utilisation de l’algorithme A*}
+\end{figure}
+
+L’histogramme ne trouvera pas de solution (espace entre le ‘g’ et le ‘d’ est sur la même ligne que le ‘l’). On lance alors l’algorithme A* entre le point de départ de la ligne rouge et le point sur la même ligne 10\% de la largeur de l’image plus loin, après vérification d’avoir trouvé un espace blanc.
+
+\bigbreak\textbf{Interprétation et critiques des résultats}\bigbreak
+
+Cette méthode a aussi été arrêté pendant son développement pour être ré-adaptée. En effet, en parallèle aux premiers résultats,  il a été pensé de travailler avec cette algorithme dans une zone de sûreté, où l'on pourrait faire avancer la segmentation ainsi que l'algorithme A*, en s'assurant qu'il ne couperait aucune ligne.
+
+Cette nouvelle idée a donné lieu à notre dernière méthode, aujourd'hui en cours d'implémentation.
+
+\newpage
+\subsubsection{Méthode Histogramme-Rectangle-A*}
+Cette méthode étant une évolution de la méthode précédente (Histogramme-A*), elle reprend certaines étapes de cette dernière.\bigbreak
+Ainsi, le découpage de la totalité du texte en paragraphes, sur lesquels nous appliquerons notre traitement a été repris (cf \ref{texte_en_paragraphe}).\bigbreak
+Comme cité dans la partie précédente, nous cherchons ici à trouver une zone sécurisée où faire progresser notre segmentation.\bigbreak
+
+\bigbreak\textbf{Histogrammes séparés}\bigbreak
+Pour parvenir à trouver des zones sécurisées sur la totalité de la largeur de nos paragraphes, nous travaillons avec seulement un dixième de du paragraphe (sue la totalité de la hauteur). Nous nous retrouvons donc avec 10 colonnes de la même hauteur que notre paragraphe et largeur équivalente à un dixième de la largeur de notre paragraphe\bigbreak
+Sur chacune de ces colonnes, le programme calcul un histogramme vertical sur la totalité de cette partie du paragraphe. Il cherche ensuite les valeurs nulles de notre histogramme. Grâce à cela, il trouvera des zones vides de caractères écrits et pourra déclarer cette zone comme sécurisée.\bigbreak
+Pour obtenir un résultat visuel sur ces calculs, nous traçons des rectangles colorés correspondant à ces zones de blancs trouvées par les histogrammes. Ces rectangles ont pour largeur la même que la colonne, comme hauteur le nombre de rangées consécutives blanches trouvées par l'histogramme et se commençant au niveau de la première rangée de pixels blancs de l'histogramme.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{1.png}
+        };
+    \end{tikzpicture}
+    \caption{Premier résultat}
+\end{figure}
+
+Après les premiers résultats, nous avons choisi de retirer un maximum de rectangle inutile. Les premiers que nous avons enlevé sont les rectangles en contact avec le haut ou le bas de l'image. En effet, ces rectangles ne donnent aucune information pour séparer 2 lignes du texte écrit. Cela nous permet aussi de n'avoir aucun rectangle sur les paragraphes ne contenant qu'une seule ligne de texte écrit.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{2.png}
+        };
+    \end{tikzpicture}
+    \caption{Les rectangles atteignant le haut ou le bas de l'image ont été retirés}
+    \label{img:notopnobottomrect}
+\end{figure}
+
+Dans la figure \ref{img:notopnobottomrect}, nous pouvons identifier un autre problème. Ce dernier est créer par les accents, les points des \og i\fg{} ou des \og j\fg, par certaines ponctuations, etc. Les histogrammes verticaux trouvent souvent un espace blanc entre eux et le mot le plus proche. Pour résoudre ceci, dès qu'un pic fin est identifié sur l'histogramme (moins de 30 valeurs non nulles à la suite), nous essayons de rattacher cet élément au gros pic le plus proche.\bigbreak
+Pour cela, nous partons depuis le pic identifié. Nous mesurons ensuite les espaces blancs au dessus et en dessous de notre pic. Si un des espaces blancs arrive jusqu'au bord de l'image, il n'est pas pris en compte. Une fois ces mesures réalisées, on considère le plus petit des deux comme inexistant. Notre élément est alors rattaché au gros pic le plus proche.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{3.png}
+        };
+    \end{tikzpicture}
+    \caption{Les accents et les ponctuations ont été regroupé au mot correspondant}
+\end{figure}
+
+\newpage
+
+\bigbreak\textbf{Liaisons des rectangles}\bigbreak
+
+La prochaine étape est d'analyser la position des rectangles pour déterminer ceux qui montre une séparation entre deux lignes de textes écrits.\bigbreak
+Les rectangles ont été sauvegardés dans cet ordre (dû au traitement par histogramme): d'abord tous les rectangles des premiers 10\%, du plus haut au plus bas puis du les rectangles entre les 10\% et 20\% de la largeur de l'image de haut en bas, etc. jusqu'aux rectangles des derniers 10\% de haut en bas.\bigbreak
+Pour relier les rectangles et former des lignes, notre algorithme commence par chercher le prochain rectangle non-relié et commence une nouvelle ligne de segmentation avec ce dernier. Il va ensuite connecter tous les rectangles qui ont au moins une rangée de pixels en commun avec l'un des trois derniers rectangles de notre début de ligne (ou tous les rectangles de notre début de segmentation s'ils sont moins de trois).\\
+Le rectangle testé actuellement doit aussi avoir au plus 2 fois 10\% de l'image d'écart avec le dernier rectangle du début de segmentation.\bigbreak
+Un rectangle ne peut donc être relier qu'avec un rectangle situé à sa gauche.\\
+Après avoir réussi à attacher tous nos rectangles, nous avons modifié notre fonction de colorisation des espaces pour qu'elle nous montre une couleur différente par ligne et ainsi mieux observer les résultats obtenus.
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{4.png}
+        };
+    \end{tikzpicture}
+    \caption{Segmentation colorée}
+    \label{img:coloredrectangles}
+\end{figure}
+
+\newpage
+Grâce à cet exemple, il est possible de remarquer plusieurs comportements à utiliser ou à corriger.\bigbreak
+
+Le premier concerne le rectangle rose. Il est le seul de sa couleur car il ne possède aucune rangée de pixels commune avec le rectangle vert à sa gauche.\\
+Le rectangle seul comme celui-c ne fournissant que peu d'informations, nous avons choisi de les supprimer pour la suite de notre traitement\bigbreak
+
+Le second se situe sur la ligne bleue à la troisième colonne. Deux rectangles sont attachés à la même ligne. Or deux rectangles de la même colonne ne peuvent et ne doivent pas être relié à la même ligne sinon la segmentation ne saura pas lequel est le choix à suivre.\\
+Nous gardons donc le premier qui se présente, celui du haut.\bigbreak
+
+Cependant, ce rectangle du haut est ensuite supprimé pour une autre raison remarquée durant nos tests.\\
+Un rectangle n'ayant aucune rangée en commun avec son prédécesseur ni son successeur est un rectangle donnant de mauvaises informations. Le plus souvent, le rectangle isolé se situe de l'autre côté de la ligne écrite et donnerait donc une segmentation traversant la ligne écrite et la découpant en plusieurs parties.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{5.png}
+        };
+    \end{tikzpicture}
+    \caption{Résulat obtenu après ces divers améliorations}
+\end{figure}
+
+La dernière fonction de sélection des rectangles enlève les rectangles, donc les espaces blancs trop fin. Ils sont souvent causés par la séparation en 10 colonnes qui coupe des caractères en deux.\\
+C'est le cas dans notre exemple (figure \ref{img:coloredrectangles}):le premier rectangle bleu de la troisième colonne est alors supprimé. Ainsi, le second rectangle bleu de la 3ème colonne (figure \ref{img:coloredrectangles}) est le seul rectangle relié à la ligne bleue sur cette colonne. Il réapparaît donc dans nos résultats suivants (figure \ref{img:afterthinspacesremoved}).\\
+De plus, le rectangle vert de la cinquième colonne (figure \ref{img:coloredrectangles}) est maintenant considéré comme trop petit et disparaît aussi (figure \ref{img:afterthinspacesremoved}).
+
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{6.png}
+        };
+    \end{tikzpicture}
+    \caption{Résulat obtenu après ces divers améliorations}
+    \label{img:afterthinspacesremoved}
+\end{figure}
+
+C'est ici que se termine le traitement sur nos rectangles. Ils vont maintenant être transformés pour la prochaine étape.\bigbreak
+
+\bigbreak\textbf{Des rectangles vers le tracé de segmentation}\bigbreak
+
+Sur la figure \ref{img:afterthinspacesremoved}, la sélection des rectangle est terminée et nous nous retrouvons avec des colonnes vides au milieu des groupes de rectangles.\bigbreak
+C'est à ce moment que l'algorithme A* (cf partie algorithme A*) trouvera son utilité. Mais pour travailler avec cet algorithme, nous devons le fournir deux points. Après plusieurs tests, nous avons choisi de sauvegarder 2 point de chaque rectangle: le point au milieu de son côté gauche et le point au milieu de son côté droit. Grâce à ce choix, la segmentation s'écarte au maximum des 2 lignes écrites.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"Astar choices"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Choix d'A* possible en fonction des points des rectangles sauvegardés}
+    \label{img:Astar choices}
+\end{figure}
+
+Cette distance donne plus de sûreté à la solution de l'algorithme A*. Sur la figure \ref{img:Astar choices}, nous avons tracé 2 exemples de solution que pourrait nous donné l'algorithme de plus cours chemin: en rouge si nous découpons selon nos rectangles au plus proche du texte et en bleu si nous gardons un marge de sécurité.\\
+On remarque que si nous restons au plus près du texte, l'algorithme A* peut choisir comme solution de passer par dessus un mot et créer de mauvaise segmentation.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"ligne sans Astar"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Découpage en ligne avant l'implémentation d'A*}
+\end{figure}
+
+Les points que l'algorithme A* devra relier ont été choisi. Dès que deux rectangles consécutives dans nos groupes de rectangles sont à plus de 10\% de la largeur de l'image de distance (c'est-à-dire qu'il y a au moins une colonne vide entre les deux rectangles), cette méthode sera utilisée.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"exemple astar rect"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Exemple avec situations où A* sera appelé}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"exemple astar ligne"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Découpage en ligne avec A*}
+\end{figure}
+
+\newpage
+\bigbreak\textbf{Les limites de l'utilisation d'A*}\bigbreak
+
+Après observations des résultats de l'étape précédente, nous avons trouvé deux situations à cause desquelles nous obtenions de mauvaises segmentations:
+\begin{itemize}
+    \item lorsqu'il n'y a pas de rectangle entre le côté gauche de l'image et le début de notre groupe de rectangle
+    \item lorsqu'il n'y a pas de rectangle entre la fin notre groupe de rectangle et le côté droit de l'image
+\end{itemize}
+\bigbreak
+La ligne rouge (première ligne de la figure \ref{img:nostartnoendrect}) possède les 2 situations:
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"Astar start-end rect"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Ligne(s) avec un début et/ou une fin manquant(e)}
+    \label{img:nostartnoendrect}
+\end{figure}
+
+\newpage
+La solution trouvée pour corriger ces deux situations est une nouvelle fois l'utilisation de l'algorithme de plus court chemin A*.\bigbreak
+Malheureusement, dans ces deux situations nous n'avons qu'un seul point à utiliser pour notre algorithme: le point du bout de notre groupe de rectangles.\\
+Pour obtenir un second point et relier notre groupe de rectangle aux bords de l'image, un point fictif est nécessaire. Nous devons donc extrapoler la position de ce point à partir des données que nous avons. Pour obtenir les coordonnées de ce point fictif, nous avons implémenté un modèle de régression linéaire en utilisant comme données les points déjà identifiés sur notre ligne.\bigbreak
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.5\textwidth]{{"regression lineaire"}.png}
+    \caption{Exemple d'un modèle de régression linéaire}
+    \label{img:regressionlineaire}
+\end{figure}
+
+Nous utiliserons le plus simple qui est l'ajustement affine. Cela consiste à rechercher une droite permettant d'expliquer le comportement d'une variable statistique Y comme étant une fonction affine d'une autre variable statistique X. Il s'agit donc de trouver deux réels a et b, tels que l'on ait, à quelques erreurs près:
+\begin{equation}
+Y = aX + b
+\label{eq:fonctonaffine}
+\end{equation}
+\bigbreak
+Un ajustement affine est envisageable lorsque le nuage de points associé au couple de variables statistiques (X,Y) semble s'organiser autour d'une droite. C'est notre cas: nous utiliserons les PHVs (exemple sur l'image de la figure \ref{img:PVHs}) comme donnée. Les coordonnées des PHVs détermineront leurs valeurs sur les deux axes pour le calcul de notre fonction affine.\bigbreak 
+
+L'ajustement affine permet de procéder à des prévisions sur un comportement futur proche ou à des interpolations entre deux mesures effectuées. Il existe plusieurs méthodes d'ajustement affine dont la plus usitée est l'ajustement par la méthode des moindres carrés, exemple de régression linéaire simple.\bigbreak
+Une fois que nous connaîtrons l'équation correspondant à notre fonction (ses facteurs a et b, cf équation \ref{eq:fonctonaffine}), il sera facile de récupérer les coordonnées de nos point factices.\\
+Leur abscisse (valeur X) correspond au côté où nous le cherchons (0 pour le côté gauche et \og largeur de l'image\fg{} pour le côté droit). Leur ordonnée en remplaçant X par leur abscisse dans notre fonction affine.
+
+\begin{equation}
+\hat{a}=\frac{\sum_{i=1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{\sum_{i=1}^{n}(x_{i} - \bar{x})^{2}}
+\end{equation}
+
+\begin{equation}
+\hat{b}=\bar{y} - a\bar{x}
+\end{equation}
+
+Où $\bar{x}$ est la moyenne des abscisses des points donnés:
+\begin{equation}
+\bar{x}=\frac{\sum_{i=1}^{n} x_{i}}{n}
+\end{equation}
+
+Où $\bar{y}$ est la moyenne des ordonnées des points donnés:
+\begin{equation}
+\bar{y}=\frac{\sum_{i=1}^{n} y_{i}}{n}
+\end{equation}
+
+$\hat{a}$ et $\hat{b}$ sont les estimateurs respectifs de $a$ et $b$. Ce sont des estimations des valeurs et non leurs valeurs exacts.\bigbreak
+
+Afin de réaliser tout ces calculs, nous avons besoins de connaître les coordonnées d'un maximum de point de notre groupe tracé de segmentation. C'est pour cela que la gestion de ces deux cas se fera après en dernier.
+
+\begin{figure}[!h]
+\centering
+    \begin{tikzpicture}
+        \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+        {
+            \includegraphics[width=0.9\textwidth]{{"Astar start-end ligne"}.png}
+        };
+    \end{tikzpicture}
+    \caption{Affichage des tracés de segmentation calculés avec les fonctions affines obtenues par la régression linéaire (A* non utilisé pour montrer clairement la pente obtenue avec l'ajustement affine)}
+    \label{img:segmentationfinal}
+\end{figure}
+
+\newpage
+Cependant, il nous faut un maximum de point pour calculer cette pente. Si nous avons trop peu de rectangle, L'extrapolation d'un nouveau point pourrait donner de mauvais résultats.\bigbreak
+
+\bigbreak\textbf{Interprétations et critiques des résultats}\bigbreak
+
+L'analyse visuelle des derniers résultats rend cette solution très prometteuse (figure \ref{img:segmentationfinal}).\\
+Sur les 24 textes de notre base de tests 2017, seuls 2 textes présentes des soucis de segmentation contre 9 avec la méthode présente à mon arrivée.\\
+Ces résultats sont vrais si l'implémentation de l'algorithme de plus court chemin se fait sans soucis et donnent les résultats attendus.\\
+En effet, son intégration étant en court, nous ne pouvons pas obtenir de résultats chiffrés sur une amélioration de la reconnaissance.\bigbreak
+
+\newpage
+\section{Conclusion}
+\subsection{Avancée du projet}
+Le but de ce stage était l'amélioration du projet IScan, un logiciel de reconnaissance intelligente de caractères manuscrits développé au sein de la cellule innovation d'Aubay. Cette amélioration se traduit par une augmentation du taux de reconnaissance de l'application.\bigbreak
+
+J'ai tout d'abord travaillé sur une fonction d'affichage qui a permis aux autres membres du projet d'analyser plus rapidement le résultat de traitement sur lequel ils travaillaient. En effet, la fonction de colorisation que j'ai développé avec l'aide d'un collègue a permis d'avoir un retour visuel sur la façon dont le programme classait les espaces. De plus, cette fonction de colorisation a permis de mettre en avant quelques soucis de la segmentation du texte en lignes, ce qui a orienté la suite de mon travail sur ce projet.\bigbreak
+
+Reprendre la segmentation des lignes a occupé la majorité de mon temps de travail sur le projet.\\
+Notre premier axe de recherche, la méthode dichotomique, n'a pas abouti mais m'a permis de comprendre les situations qui pouvait poser problème lors de ce traitement. Elle était efficace sur les textes où les lignes étaient presque horizontales et bien séparées. Or ceci n'est pas le cas de la majorité des textes et c'est en ajoutant cette nouvelle problématique que nous avons abordé notre réflexion sur la méthode suivante.\bigbreak
+
+La seconde méthode a relancé nos recherches. C'est à partir de ce moment où nous avons pensé à l'intégration d'un algorithme de plus court chemin pour trouver la meilleure segmentation dans les zones difficiles (lettres mal formées, lettres de différentes lignes très proches l'une de l'autre, etc). La documentation avait complètement été écrite avant son développement ce qui nous a permis de trouver la troisième solution.\bigbreak
+
+Cette dernière méthode applique un premier traitement pour déterminer la plus grande zone de sécurité possible où une séparation entre deux lignes doit intervenir. Cela permet d'avoir une plus grande confiance des résultats obtenus par l'algorithme de plus court chemin.\\
+Les résultats obtenus sont prometteurs. Cependant, l'intégration de l'algorithme de plus court chemin n'ayant pas encore était terminée nous n'avons pas pu obtenir de résultats chiffrés.\bigbreak
+
+\newpage
+\subsection{Conclusion personnelle}
+Participer au développement d'un projet d'entreprise m'a donné un nouveau regard sur la méthodologie de travail.\bigbreak
+Bien que la méthode dichotomique ait été abandonnée, cela m'a montré que l'organisation d'un projet en entreprise est bien différente de celle des projets réalisés en tronc commun à EPITA. Il est important de prendre le temps avant de se lancer dans le développement d'une solution. En effet, cette méthode a commencé à être développé avant la rédaction d'un quelconque document. Si nous avions respecté cet ordre, nous aurions sûrement passé moins de temps dessus. Écrire un document permet de bien réfléchir à la façon dont sera codé la solution pensée et de s'assurer de ne pas dévier de l'idée de départ.\\
+Cependant, mon stage m'a aussi fait vivre le cycle de travail habituel dans les projets de recherche et développement. Lorsque nous cherchons des solution, nous commençons par poser des hypothèses. Cela permet d'y réfléchir avec l'équipe, de poser l'idée sur papier et de penser aux cas particuliers. Après les premiers résultats, il est important de tester le plus de cas possible et de bien analyser les résultats. Parfois, développer quelques fonctionnalités annexes pour faciliter l'étude des résultats, comme la fonction de colorisation, peut être très utile.\\
+Lors de nos recherches, nous devons essayer des choses et nous avons le droit à l'échec, comme ce fut le cas avec la méthode dichotomique.\bigbreak
+Ce projet m'a donné l'occasion de travailler avec des personnes de formations différentes et ainsi échanger sur nos connaissances et expériences diverses. Nous avons ainsi pu apprendre les uns des autres.\bigbreak
+Le travail proposé m’a donné l’occasion de confirmer la voie vers laquelle je me dirige pour la fin de mes études ainsi que pour avenir professionnel. 
+
+\newpage
+\pagestyle{empty}
+\pagenumbering{gobble}
+\vspace*{\fill}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\section{Annexes}
+\vspace*{\fill}
+
+\newpage
+\pagestyle{fancy}
+\textbf{\fontsize{20}{50}\selectfont Sommaire des annexes \large}\bigbreak
+Pré-traitement et colorisation des espaces . . . . . . . . . . . . . . . . . . . . . 1 \bigbreak
+Segmentation avec la méthode dichotomique . . . . . . . . . . . . . . . . . . . . 3 \bigbreak
+Segmentation avec la méthode dichotomique ratée . . . . . . . . . . . . . . . 4 \bigbreak
+Coloration : observation et correction . . . . . . . . . . . . . . . . . . . . . . . . 5 \bigbreak
+
+%----- PAGE 1
+\newpage
+\pagenumbering{arabic}
+\subsection*{Pré-traitement et colorisation des espaces}
+\begin{figure}[!h]
+\centering
+    \includegraphics[height=0.35\textheight]{{"annexe 1.1"}.png}
+    \caption{Exemple de photo originale de texte}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[height=0.35\textheight]{{"annexe 1.2"}.png}
+    \caption{Texte après binarisation: les pixels ont pour valeurs 0 (noir) ou 1 (blanc)}
+\end{figure}
+
+%----- PAGE 2
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.4\textheight]{{"annexe 1.3"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Résultat de toutes les lignes colorisées mise sur une même page (segmentées avec l’ancienne méthode)}
+    \label{annexe:texte_color}
+\end{figure}
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.4\textheight]{{"annexe 1.4"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Résultat prétraitement du traçage des blobs avant application de la méthode dichotomique}
+    \label{annexe:texte_blobs}
+\end{figure}
+
+%----- PAGE 3
+\newpage
+\subsection*{Segmentation avec la méthode dichotomique}
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.8\textheight]{{"annexe 2"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Segmentation des lignes avec la méthode dichotomique}
+\end{figure}
+
+%----- PAGE 4
+\newpage
+\subsection*{Segmentation avec la méthode dichotomique ratée}
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.8\textheight]{{"annexe 3"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Exemple de segmentation ratée lors de l’application de ma méthode}
+\end{figure}
+
+%----- PAGE 4
+\newpage
+\subsection*{Coloration: observation et correction}
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.35\textheight]{{"annexe 4.1"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Observation de segmentation ratée avec l’ancienne méthode grâce à la fonction de colorisation}
+    \label{annexe:coloration_obs}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+ \begin{tikzpicture}
+    \node[draw,line width=1pt, inner sep=0pt] (digit1) at (-4, 2)
+    {
+        \includegraphics[height=0.35\textheight]{{"annexe 4.2"}.png}
+    };
+    \end{tikzpicture}
+    \caption{Correction en enlevant les valeurs aberrantes lors du calcul des barycentres et des classes d’espaces}
+    \label{annexe:coloration_corr}
+\end{figure}
+
+\end{document}
