@@ -20,8 +20,8 @@
 
 %Configuration de la première page%
 \title{\textbf { \huge{\underline{ISCAN}} \bigbreak  \large{ICR - reconnaissance intelligente de caractères}}}
-\author{Sébastien Faure}
-\date{11 septembre 2017 - 29 décembre 2017}
+\author{SOUBRAND Florentin, VATON Thomas, LEMPEREUR Thibault, CHARDON Maxime}
+\date {2 février 2018 - 29 mai 2018}
 
 \begin{document}
 \pagestyle{fancy}
@@ -47,23 +47,10 @@
 \newpage
 \pagenumbering{arabic}
 \section{Introduction}
-\subsection{Remerciements}
-Pour commencer, je tiens à remercier mon maître de stage, M. PRINCE Xavier, pour m’avoir accueilli pour mon stage au sein d'Aubay, le partage de son expérience ainsi que la confiance accordée sur l'amélioration du projet.\bigbreak
-Je remercie également M. PORTALES Cyril pour son implication dans le déroulement de mon stage ainsi que pour son aide et son soutien.\bigbreak
-Je remercie enfin tous les stagiaires avec qui j’ai pu travailler : FEVRIER Julien, CAI Richard, FRENET BOURGOIN Guillaume et GOMIS Chris pour l'aide qu'ils m'ont apporté, ainsi que pour l’esprit d’équipe dont ils ont fait preuve.
+IntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroduction
+IntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroduction
+IntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroduction
 
-\subsection{Avant-propos}
-Dans le cadre de mon stage de fin du tronc commun de l’EPITA (Ecole Pour l’Informatique et les Technologies Avancées), j’ai participé à l’amélioration du projet I’SCAN, projet de la cellule Innovation d’Aubay pendant 4 mois, du 11 septembre 2017 au 29 décembre 2017.\bigbreak
-Aubay est une société de service numérique fondée en 1998 qui a su grandir en mettant un accent sur la qualité de leur intervention. Ils ont ainsi pu fidéliser des clients leaders du marché français, principalement dans les banques et assurances. Bien que majoritairement en France, Aubay est présente dans plusieurs pays européens. Plus de la moitié de ses effectifs reste en France. Avec aujourd’hui plus de 5000 collaborateurs, le groupe continu de croître et obtient un chiffre d’affaire de plus de 326 million d’euros en 2015 soit 9\% de croissance organique par rapport à l’année précédente.\bigbreak
-La cellule Innovation, qui m’a accueilli pour ce stage, a pour objectif de trouver une application durable aux nouveautés d’aujourd’hui et donc conduire des travaux innovants. Elle permet à Aubay de rester à jour sur les nouvelles méthodes, les nouvelles technologies et les nouvelles applications du monde numérique. C’est ici qu’ont commencé les premiers projets du groupe utilisant le machine learning ainsi que sur le Blockchain ou l’IoT. Elle est dirigée par mon maître de stage, M. PRINCE Xavier, épaulé par M. PORTALES Cyril dans l’encadrement des équipes d’Aubay Innov’.\bigbreak
-L’équipe du projet I’Scan était composée, à mon arrivée, de 3 stagiaires provenant tous d’école d’ingénieurs en informatique. M. CAI Richard, étudiant EPITA 2019 aussi en stage sur ce projet, et moi avons été intégré rapidement au sein de cette équipe, que ce soit du côté professionnel ou humain. Nous travaillions dans un open-space avec plusieurs autres équipes de stagiaires travaillant sur des projets différents. La disposition de notre environnement de travail nous a permis une communication rapide et efficace de même qu’une facilité pour recevoir ou proposer son aide. MM. PORTALES et PRINCE se tenaient toujours au courant de l’avancement du projet et étaient prêt à répondre à nos questions. Durant les réunions régulières que nous avions avec eux, nous mettions au clair l’avancé des décisions prises lors de la précédente réunion, puis nous cherchions une direction à prendre pour la suite. La réflexion était commune entre les encadrants et les stagiaires mais la réalisation nous a toujours été confiée.\bigbreak
-Le projet I’SCAN est un projet de reconnaissance intelligente de caractères (de l’anglais Intelligent Character Recognition - ICR). Le but de ce projet est la digitalisation des textes manuscrits à partir d’une image ou d’une vidéo. Ce projet mené depuis plusieurs années. Parmi les tâches évoquées lors des entretiens, il y avait l’amélioration du système de découpage du texte en ligne puis de chaque ligne en mots et enfin de chaque mot en lettres. Ce traitement est nécessaire pour le travail du réseau de neurones qui est capable de reconnaître uniquement un caractère à la fois. Afin d’être capable de reprendre le projet, des compétences en développement C++ étaient nécessaire en plus d’une capacité de réflexion pour comprendre les méthodes déjà utilisées dans le projet ou les méthodes que seraient implémentées dans le projet.\bigbreak
-\bigbreak
-
-Lors de mon arrivée sur le projet, une version fonctionnelle donnant de premiers résultats existaient déjà. Le programme était capable d’appliquer toutes les modifications nécessaires à l’image pour la traiter convenablement : recadrer et identifier le texte puis binarisation de l’image. Ensuite le texte est découpé pour obtenir des images ne contenant qu'un caractère. Une série de caractéristique est extraite de l’image de chaque caractère pour la comparer et pouvoir, grâce au réseau de neurones, classer le caractère parmi ceux qui ont des caractéristiques similaires. On peut alors en conclure sur la probabilité que ce caractère est telle lettre ou tel chiffre.\bigbreak
-Les stagiaires que nous avons rejoints venaient d’améliorer l’identification des lettres en passant de la méthode « k-nearest neighbors » (KNN) vers un réseau de neurones à convolution (CNN). \bigbreak
-Actuellement intéressé par la majeure SCIA (data SCience et Intelligence Artificielle) de l’EPITA, pouvoir travailler sur un logiciel sur le traitement d’image utilisant un réseau de neurones me permettra d’obtenir une première expérience dans ce domaine.\bigbreak
-Ce rapport présentera d’abord l’entreprise et le projet à mon arrivée. Sera ensuite présenté mon apport personnel au projet avant l’interprétation et la critique des résultats obtenus.
 
 \newpage
 

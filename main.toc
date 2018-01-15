@@ -1,0 +1,21 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Pr\IeC {\'e}sentation de l'entreprise}{2}
+\contentsline {subsection}{\numberline {2.1}Le secteur d'activit\IeC {\'e}}{2}
+\contentsline {subsection}{\numberline {2.2}L'entreprise}{2}
+\contentsline {subsection}{\numberline {2.3}La cellule Innovation}{3}
+\contentsline {subsection}{\numberline {2.4}Le projet I'Scan au sein de la cellule}{5}
+\contentsline {section}{\numberline {3}Le travail effectu\IeC {\'e}}{7}
+\contentsline {subsection}{\numberline {3.1}Le cahier des charges}{7}
+\contentsline {subsection}{\numberline {3.2}Fonctionnement global du projet}{8}
+\contentsline {subsection}{\numberline {3.3}Affichage clair du traitement des espaces}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}Interpr\IeC {\'e}tation et critiques des r\IeC {\'e}sultats}{12}
+\contentsline {subsection}{\numberline {3.4}Am\IeC {\'e}lioration de la segmentation des lignes}{13}
+\contentsline {subsubsection}{\numberline {3.4.1}Description du sujet de recherche}{13}
+\contentsline {subsubsection}{\numberline {3.4.2}M\IeC {\'e}thode dichotomique}{14}
+\contentsline {subsubsection}{\numberline {3.4.3}M\IeC {\'e}thode Histogramme-A*}{17}
+\contentsline {subsubsection}{\numberline {3.4.4}M\IeC {\'e}thode Histogramme-Rectangle-A*}{21}
+\contentsline {section}{\numberline {4}Conclusion}{30}
+\contentsline {subsection}{\numberline {4.1}Avanc\IeC {\'e}e du projet}{30}
+\contentsline {subsection}{\numberline {4.2}Conclusion personnelle}{31}
+\contentsline {section}{\numberline {5}Annexes}{}
