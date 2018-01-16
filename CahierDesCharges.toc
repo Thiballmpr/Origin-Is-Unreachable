@@ -2,23 +2,29 @@
 \contentsline {section}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {2}A propos du groupe}{3}
 \contentsline {subsection}{\numberline {2.1}Formation du groupe}{3}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation des membres}{3}
-\contentsline {section}{\numberline {3}Origine et Nature du projet}{4}
-\contentsline {subsection}{\numberline {3.1}Origine du projet}{4}
-\contentsline {subsection}{\numberline {3.2}Nature du projet}{5}
-\contentsline {subsubsection}{\numberline {3.2.1}Type de jeu}{5}
-\contentsline {subsubsection}{\numberline {3.2.2}Gameplay}{5}
-\contentsline {subsubsection}{\numberline {3.2.3}Sc\IeC {\'e}nario}{5}
-\contentsline {section}{\numberline {4}Objet de l'\IeC {\'e}tude}{6}
-\contentsline {subsection}{\numberline {4.1}Int\IeC {\'e}r\IeC {\^e}t du projet en groupe}{6}
-\contentsline {subsection}{\numberline {4.2}Int\IeC {\'e}r\IeC {\^e}t individuels}{6}
-\contentsline {section}{\numberline {5}D\IeC {\'e}coupage du projet}{7}
-\contentsline {subsection}{\numberline {5.1}D\IeC {\'e}coupage du jeu: description des diff\IeC {\'e}rentes parties}{7}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}partition des taches}{7}
-\contentsline {paragraph}{}{7}
-\contentsline {paragraph}{}{7}
-\contentsline {section}{\numberline {6}Ressources utilis\IeC {\'e}es}{8}
-\contentsline {subsection}{\numberline {6.1}Le mat\IeC {\'e}riel}{8}
-\contentsline {subsection}{\numberline {6.2}Les logiciels}{8}
-\contentsline {subsection}{\numberline {6.3}Les ressources \IeC {\'e}conomiques}{8}
-\contentsline {section}{\numberline {7}Conclusion}{9}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation des membres}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {section}{\numberline {3}Origine et Nature du projet}{5}
+\contentsline {subsection}{\numberline {3.1}Origine du projet}{5}
+\contentsline {subsection}{\numberline {3.2}Nature du projet}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}Type de jeu}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}Gameplay}{6}
+\contentsline {subsubsection}{\numberline {3.2.3}Sc\IeC {\'e}nario}{6}
+\contentsline {section}{\numberline {4}Objet de l'\IeC {\'e}tude}{7}
+\contentsline {subsection}{\numberline {4.1}Int\IeC {\'e}r\IeC {\^e}t du projet en groupe}{7}
+\contentsline {subsection}{\numberline {4.2}Int\IeC {\'e}r\IeC {\^e}ts individuels}{7}
+\contentsline {paragraph}{Pour "Trasher"}{7}
+\contentsline {section}{\numberline {5}D\IeC {\'e}coupage du projet}{8}
+\contentsline {subsection}{\numberline {5.1}D\IeC {\'e}coupage du jeu: description des diff\IeC {\'e}rentes \newline parties}{8}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}partition des taches}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{Plus on va vers le rouge plus le niveau d'implication dans le domaine est \IeC {\'e}lev\IeC {\'e}.}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {section}{\numberline {6}Ressources utilis\IeC {\'e}es}{9}
+\contentsline {subsection}{\numberline {6.1}Le mat\IeC {\'e}riel}{9}
+\contentsline {subsection}{\numberline {6.2}Les logiciels}{9}
+\contentsline {subsection}{\numberline {6.3}Les ressources \IeC {\'e}conomiques}{9}
+\contentsline {section}{\numberline {7}Conclusion}{10}
