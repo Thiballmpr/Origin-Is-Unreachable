@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.15)  17 JAN 2018 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.1.15)  17 JAN 2018 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,46 +729,24 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen166
 \titlewidthfirst=\dimen167
 )
-(./main.aux
-! Undefined control sequence.
-l.6 \babel@aux
-              {french}{}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \babel@aux{f
-                rench}{}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Info: Redefining \degres on input line 26.
-LaTeX Info: Redefining \dots on input line 26.
-LaTeX Info: Redefining \up on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Info: Redefining \degres on input line 28.
+LaTeX Info: Redefining \dots on input line 28.
+LaTeX Info: Redefining \up on input line 28.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count120
@@ -841,105 +819,37 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-ABD: EveryShipout initializing macros [1
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.88> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <20.74> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
-
-Overfull \hbox (158.00204pt too wide) in paragraph at lines 30--30
+Overfull \hbox (158.00204pt too wide) in paragraph at lines 32--32
  [][] 
  []
 
+[1
 
-LaTeX Warning: File `aubay.png' not found on input line 35.
-
-
-! Package pdftex.def Error: File `aubay.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ...cludegraphics[width=\linewidth]{aubay.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 35.
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 36.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
-
-
-LaTeX Warning: File `epita.jpg' not found on input line 39.
-
-
-! Package pdftex.def Error: File `epita.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 ...cludegraphics[width=\linewidth]{epita.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2] (./main.toc
-! Undefined control sequence.
-l.1 \babel@toc
-               {french}{}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 ...e {section}{\numberline {1}Introduction}{1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 ...e {section}{\numberline {1}Introduction}{1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+(Font)              <6> on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3]
-Overfull \hbox (848.91986pt too wide) in paragraph at lines 50--53
+ [2]
+Overfull \hbox (848.91986pt too wide) in paragraph at lines 41--44
 []\T1/cmr/m/n/12 IntroductionIntroductionIntroductionIntroductionIntroductionIn
 troductionIntroductionIntroductionIntroductionIntroductionIntroductionIntroduct
 ionIntroductionIntroductionIntroductionIntroductionIntroductionIntroductionIntr
@@ -947,931 +857,530 @@ oduction
  []
 
 
-Overfull \hbox (252.78687pt too wide) in paragraph at lines 50--53
+Overfull \hbox (252.78687pt too wide) in paragraph at lines 41--44
 \T1/cmr/m/n/12 In-tro-duc-tio-nIn-tro-duc-tio-nIn-tro-duc-tio-nIn-tro-duc-tio-n
 In-tro-duc-tio-nIntroductionIntroductionIntroductionIntroductionIntroduction
  []
 
 
-Overfull \hbox (59.9508pt too wide) in paragraph at lines 50--53
+Overfull \hbox (59.9508pt too wide) in paragraph at lines 41--44
 \T1/cmr/m/n/12 In-tro-duc-tio-nIn-tro-duc-tio-nIn-tro-duc-tio-nIn-tro-duc-tio-n
 In-tro-duc-tio-nIntroductionIntroduction 
  []
 
-[1]
+<logo-epita.png, id=18, 4302.0725pt x 2912.8825pt>
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 46. on input line 4
+6.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+6.
+<logo.png, id=20, 963.6pt x 963.6pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 46. on input line 46.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+46.
 
-LaTeX Warning: File `{"secteurs chiffre d'affaire"}.png' not found on input lin
-e 66.
+Package Fancyhdr Warning: \footskip is too small (30.0pt): 
+ Make it at least 48.18282pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[1 <./logo-epita.png> <./logo.png>]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 66. on input line 6
+6.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 6
+6.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 66. on input line 66.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+66.
+ [2]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 81. on input line 8
+1.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 8
+1.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 81. on input line 81.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+81.
+ [3]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 85. on input line 8
+5.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 8
+5.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 85. on input line 85.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+85.
+ [4]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 101. on input line 
+101.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+01.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 101. on input line 101.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+101.
+ [5]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 107. on input line 
+107.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+07.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 107. on input line 107.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+107.
+ [6]
 
-! Package pdftex.def Error: File `"secteurs chiffre d'affaire".png' not found: 
-using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 ...width]{{"secteurs chiffre d'affaire"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `{"pays chiffre d'affaire"}.png' not found on input line 75
-.
-
-
-! Package pdftex.def Error: File `"pays chiffre d'affaire".png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 ...linewidth]{{"pays chiffre d'affaire"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `{"effectif aubay"}.png' not found on input line 84.
-
-
-! Package pdftex.def Error: File `"effectif aubay".png' not found: using draft 
-setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 ...dth=0.7\linewidth]{{"effectif aubay"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
-
-LaTeX Warning: File `{"evolution chiffre d'affaire"}.png' not found on input li
-ne 92.
-
-
-! Package pdftex.def Error: File `"evolution chiffre d'affaire".png' not found:
- using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92 ...idth]{{"evolution chiffre d'affaire"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3]
-
-LaTeX Warning: File `{"Organisation Aubay France"}.png' not found on input line
- 103.
+LaTeX Warning: Reference `etapes_projet' on page 7 undefined on input line 109.
 
 
-! Package pdftex.def Error: File `"Organisation Aubay France".png' not found: u
-sing draft setting.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...width]{{"Organisation Aubay France"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `blobs_lettres' on page 7 undefined on input line 109.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5] [6]
+LaTeX Warning: Reference `blobs_mots' on page 7 undefined on input line 110.
 
-LaTeX Warning: File `{"photo tableau"}.jpg' not found on input line 133.
-
-
-! Package pdftex.def Error: File `"photo tableau".jpg' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 ...[width=\linewidth]{{"photo tableau"}.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `{"resultat souhaite"}.png' not found on input line 138.
-
-
-! Package pdftex.def Error: File `"resultat souhaite".png' not found: using dra
-ft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138 ...th=\linewidth]{{"resultat souhaite"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 114. on input line 
+114.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+14.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 114. on input line 114.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+114.
 [7]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 120. on input line 
+120.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+20.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 120. on input line 120.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+120.
+ [8]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 148. on input line 
+148.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+48.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 148. on input line 148.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+148.
+ [9]
 
-LaTeX Warning: File `{"etapes projet"}.png' not found on input line 151.
-
-
-! Package pdftex.def Error: File `"etapes projet".png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 ...dth=0.9\linewidth]{{"etapes projet"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8]
-
-LaTeX Warning: File `{"blobs autour des lettres"}.png' not found on input line 
-163.
-
-
-! Package pdftex.def Error: File `"blobs autour des lettres".png' not found: us
-ing draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.163 ...ewidth]{{"blobs autour des lettres"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `annexe:texte_color' on page 10 undefined on input lin
+e 158.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `annexe:coloration_obs' on page 10 undefined on input 
+line 158.
 
 
-LaTeX Warning: File `{"blobs autour des mots"}.png' not found on input line 170
+LaTeX Warning: Reference `etapes_projet' on page 10 undefined on input line 159
 .
 
 
-! Package pdftex.def Error: File `"blobs autour des mots".png' not found: using
- draft setting.
+LaTeX Warning: Reference `etapes_projet' on page 10 undefined on input line 159
+.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 ...linewidth]{{"blobs autour des mots"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9]
-
-LaTeX Warning: File `{"histo vertical"}.png' not found on input line 182.
-
-
-! Package pdftex.def Error: File `"histo vertical".png' not found: using draft 
-setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.182 ...th=0.6\linewidth]{{"histo vertical"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 164. on input line 
+164.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+64.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 164. on input line 164.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+164.
 [10]
 
-LaTeX Warning: File `{"barycentres"}.png' not found on input line 191.
+LaTeX Warning: Reference `annexe:coloration_corr' on page 11 undefined on input
+ line 176.
 
 
-! Package pdftex.def Error: File `"barycentres".png' not found: using draft set
-ting.
+LaTeX Warning: Reference `annexe:coloration_corr' on page 11 undefined on input
+ line 179.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.191 ...width=0.9\linewidth]{{"barycentres"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"ligne coloree 3"}.png' not found on input line 208.
-
-
-! Package pdftex.def Error: File `"ligne coloree 3".png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.208 ...h=0.9\linewidth]{{"ligne coloree 3"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 183. on input line 
+183.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 1
+83.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 183. on input line 183.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+183.
 [11]
 
-LaTeX Warning: File `{"zones incertitudes"}.png' not found on input line 233.
+LaTeX Warning: Reference `img:histobleu' on page 12 undefined on input line 197
+.
 
-
-! Package pdftex.def Error: File `"zones incertitudes".png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233 ....9\linewidth]{{"zones incertitudes"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"ligne coloree 5"}.png' not found on input line 244.
-
-
-! Package pdftex.def Error: File `"ligne coloree 5".png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.244 ...h=0.9\linewidth]{{"ligne coloree 5"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 204. on input line 
+204.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 2
+04.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 204. on input line 204.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+204.
 [12]
-
-LaTeX Warning: File `{"erreur segmentation"}.png' not found on input line 271.
-
-
-! Package pdftex.def Error: File `"erreur segmentation".png' not found: using d
-raft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ...9\linewidth]{{"erreur segmentation"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13]
-
-LaTeX Warning: File `{"blobs remplace lettres"}.png' not found on input line 29
-3.
-
-
-! Package pdftex.def Error: File `"blobs remplace lettres".png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.293 ...inewidth]{{"blobs remplace lettres"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"histo bleu"}.png' not found on input line 312.
-
-
-! Package pdftex.def Error: File `"histo bleu".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.312 ...[width=0.7\textwidth]{{"histo bleu"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `{"histo rouge"}.png' not found on input line 323.
-
-
-! Package pdftex.def Error: File `"histo rouge".png' not found: using draft set
-ting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.323 ...width=0.7\textwidth]{{"histo rouge"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"lignes chevauche"}.png' not found on input line 340.
-
-
-! Package pdftex.def Error: File `"lignes chevauche".png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.340 ...0.2\textheight]{{"lignes chevauche"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `{"histo bleu sans vide"}.png' not found on input line 350.
-
-
-
-! Package pdftex.def Error: File `"histo bleu sans vide".png' not found: using 
-draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.350 ...\textwidth]{{"histo bleu sans vide"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14] [15] [16]
-
-LaTeX Warning: File `{"histo noir"}.png' not found on input line 439.
-
-
-! Package pdftex.def Error: File `"histo noir".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.439 ...[width=0.7\linewidth]{{"histo noir"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17] [18]
-
-LaTeX Warning: File `HVPs.png' not found on input line 478.
-
-
-! Package pdftex.def Error: File `HVPs.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.478 ...degraphics[width=0.9\textwidth]{HVPs.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[19]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"situation Astar"}.png' not found on input line 493.
-
-
-! Package pdftex.def Error: File `"situation Astar".png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.493 ...h=0.9\textwidth]{{"situation Astar"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[20]
-Overfull \hbox (11.09946pt too wide) in paragraph at lines 509--509
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 247. on input line 
+247.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 2
+47.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 247. on input line 247.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+247.
+ [13]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 263. on input line 
+263.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 2
+63.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 263. on input line 263.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+263.
+ [14]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 281. on input line 
+281.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 2
+81.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 281. on input line 281.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+281.
+ [15]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 288. on input line 
+288.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 2
+88.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 288. on input line 288.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+288.
+ [16]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 308. on input line 
+308.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+08.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 308. on input line 308.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+308.
+ [17]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 320. on input line 
+320.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+20.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 320. on input line 320.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+320.
+ [18]
+Overfull \hbox (11.09946pt too wide) in paragraph at lines 322--322
 []\T1/cmr/m/n/12 Cette mé-thode étant une évo-lu-tion de la mé-thode pré-cé-den
 te (Histogramme-
  []
 
 
-LaTeX Warning: File `1.png' not found on input line 523.
+LaTeX Warning: Reference `img:notopnobottomrect' on page 19 undefined on input 
+line 335.
+
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 336. on input line 
+336.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+36.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 336. on input line 336.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+336.
+[19]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 339. on input line 
+339.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+39.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 339. on input line 339.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+339.
+ [20]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 352. on input line 
+352.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+52.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 352. on input line 352.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+352.
+ [21]
+
+LaTeX Warning: Reference `img:coloredrectangles' on page 22 undefined on input 
+line 365.
 
 
-! Package pdftex.def Error: File `1.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.523 ...cludegraphics[width=0.9\textwidth]{1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `img:coloredrectangles' on page 22 undefined on input 
+line 365.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `img:afterthinspacesremoved' on page 22 undefined on i
+nput line 365.
 
 
-LaTeX Warning: File `2.png' not found on input line 536.
+LaTeX Warning: Reference `img:coloredrectangles' on page 22 undefined on input 
+line 366.
 
 
-! Package pdftex.def Error: File `2.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.536 ...cludegraphics[width=0.9\textwidth]{2.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `img:afterthinspacesremoved' on page 22 undefined on i
+nput line 366.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `img:afterthinspacesremoved' on page 22 undefined on i
+nput line 375.
 
-[21]
-
-LaTeX Warning: File `3.png' not found on input line 551.
-
-
-! Package pdftex.def Error: File `3.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.551 ...cludegraphics[width=0.9\textwidth]{3.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 376. on input line 
+376.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+76.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 376. on input line 376.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+376.
 [22]
 
-LaTeX Warning: File `4.png' not found on input line 573.
+LaTeX Warning: Reference `img:Astar choices' on page 23 undefined on input line
+ 380.
 
-
-! Package pdftex.def Error: File `4.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.573 ...cludegraphics[width=0.9\textwidth]{4.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 388. on input line 
+388.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 3
+88.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 388. on input line 388.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+388.
 [23]
 
-LaTeX Warning: File `5.png' not found on input line 597.
+LaTeX Warning: Reference `img:nostartnoendrect' on page 24 undefined on input l
+ine 397.
 
-
-! Package pdftex.def Error: File `5.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.597 ...cludegraphics[width=0.9\textwidth]{5.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `6.png' not found on input line 613.
-
-
-! Package pdftex.def Error: File `6.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.613 ...cludegraphics[width=0.9\textwidth]{6.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 400. on input line 
+400.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+00.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 400. on input line 400.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+400.
 [24]
 
-LaTeX Warning: File `{"Astar choices"}.png' not found on input line 632.
+LaTeX Warning: Reference `img:PVHs' on page 25 undefined on input line 412.
 
-
-! Package pdftex.def Error: File `"Astar choices".png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.632 ...dth=0.9\textwidth]{{"Astar choices"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"ligne sans Astar"}.png' not found on input line 647.
-
-
-! Package pdftex.def Error: File `"ligne sans Astar".png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.647 ...=0.9\textwidth]{{"ligne sans Astar"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"exemple astar rect"}.png' not found on input line 660.
-
-
-! Package pdftex.def Error: File `"exemple astar rect".png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.660 ....9\textwidth]{{"exemple astar rect"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"exemple astar ligne"}.png' not found on input line 671.
-
-
-! Package pdftex.def Error: File `"exemple astar ligne".png' not found: using d
-raft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.671 ...9\textwidth]{{"exemple astar ligne"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 429. on input line 
+429.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+29.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 429. on input line 429.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+429.
 [25]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 442. on input line 
+442.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+42.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 442. on input line 442.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+442.
+ [26]
 
-LaTeX Warning: File `{"Astar start-end rect"}.png' not found on input line 693.
+LaTeX Warning: Reference `img:segmentationfinal' on page 27 undefined on input 
+line 447.
 
-
-
-! Package pdftex.def Error: File `"Astar start-end rect".png' not found: using 
-draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.693 ...\textwidth]{{"Astar start-end rect"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26]
-
-LaTeX Warning: File `{"regression lineaire"}.png' not found on input line 707.
-
-
-! Package pdftex.def Error: File `"regression lineaire".png' not found: using d
-raft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.707 ...5\textwidth]{{"regression lineaire"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 452. on input line 
+452.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+52.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 452. on input line 452.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+452.
 [27]
-
-LaTeX Warning: File `{"Astar start-end ligne"}.png' not found on input line 751
-.
-
-
-! Package pdftex.def Error: File `"Astar start-end ligne".png' not found: using
- draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.751 ...textwidth]{{"Astar start-end ligne"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28] [29] [30] [31] (/usr/share/texmf-dist/tex/latex/titlesec/block.tss
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 467. on input line 
+467.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+67.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 467. on input line 467.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+467.
+ [28]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 476. on input line 
+476.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+76.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 476. on input line 476.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+476.
+ [29] (/usr/share/texmf-dist/tex/latex/titlesec/block.tss
 File: block.tss 2016/03/15
-)
-[1]
+) [1]
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 802.
+(Font)              size <20.74> substituted on input line 486.
 
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 493. on input line 
+493.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 4
+93.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 493. on input line 493.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+493.
 [2]
-
-LaTeX Warning: File `{"annexe 1.1"}.png' not found on input line 814.
-
-
-! Package pdftex.def Error: File `"annexe 1.1".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.814 ...ight=0.35\textheight]{{"annexe 1.1"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"annexe 1.2"}.png' not found on input line 820.
-
-
-! Package pdftex.def Error: File `"annexe 1.2".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820 ...ight=0.35\textheight]{{"annexe 1.2"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"annexe 1.3"}.png' not found on input line 830.
-
-
-! Package pdftex.def Error: File `"annexe 1.3".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.830 ...eight=0.4\textheight]{{"annexe 1.3"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"annexe 1.4"}.png' not found on input line 841.
-
-
-! Package pdftex.def Error: File `"annexe 1.4".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.841 ...eight=0.4\textheight]{{"annexe 1.4"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1]
-
-LaTeX Warning: File `{"annexe 2"}.png' not found on input line 856.
-
-
-! Package pdftex.def Error: File `"annexe 2".png' not found: using draft settin
-g.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.856 ...[height=0.8\textheight]{{"annexe 2"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (84.73254pt too wide) in paragraph at lines 858--859
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[2]
-
-LaTeX Warning: File `{"annexe 3"}.png' not found on input line 870.
-
-
-! Package pdftex.def Error: File `"annexe 3".png' not found: using draft settin
-g.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.870 ...[height=0.8\textheight]{{"annexe 3"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (84.73254pt too wide) in paragraph at lines 872--873
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3]
-
-LaTeX Warning: File `{"annexe 4.1"}.png' not found on input line 884.
-
-
-! Package pdftex.def Error: File `"annexe 4.1".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.884 ...ight=0.35\textheight]{{"annexe 4.1"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `{"annexe 4.2"}.png' not found on input line 896.
-
-
-! Package pdftex.def Error: File `"annexe 4.2".png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.896 ...ight=0.35\textheight]{{"annexe 4.2"}.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-[20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
-[35] [36] [37] (./main.aux)
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 505. on input line 
+505.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 5
+05.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 505. on input line 505.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+505.
+ [1]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 510. on input line 
+510.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 5
+10.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 510. on input line 510.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+510.
+ [2]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 516. on input line 
+516.
+Package pdftex.def Info: Requested size: 64.5283pt x 43.69135pt on input line 5
+16.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 516. on input line 516.
+Package pdftex.def Info: Requested size: 48.18282pt x 48.18282pt on input line 
+516.
+ [3] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 15049 strings out of 492985
- 282920 string characters out of 6138638
- 348968 words of memory out of 5000000
- 18277 multiletter control sequences out of 15000+600000
- 20245 words of font info for 49 fonts, out of 8000000 for 9000
+ 14937 strings out of 492985
+ 280473 string characters out of 6138638
+ 329931 words of memory out of 5000000
+ 18217 multiletter control sequences out of 15000+600000
+ 18488 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,54p,927b,820s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,54p,916b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1882,16 +1391,14 @@ are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
 blic/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
 fbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></u
 sr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-
-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf-dist/fonts/type
-1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
-></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/te
-xmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/
-type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (73 pages, 326680 bytes).
+dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type
+1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
+er/sfsl1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb
+>
+Output written on main.pdf (36 pages, 1255407 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
+ 189 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
