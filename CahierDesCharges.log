@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.18)  18 JAN 2018 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.18)  18 JAN 2018 13:34
 entering extended mode
 **./CahierDesCharges.tex
 (CahierDesCharges.tex
@@ -914,23 +914,37 @@ Package pdftex.def Info: logo.png  used on input line 204.
  [10]
 File: logo-epita.png Graphic file (type png)
 <use logo-epita.png>
-Package pdftex.def Info: logo-epita.png  used on input line 229.
+Package pdftex.def Info: logo-epita.png  used on input line 230.
 (pdftex.def)             Requested size: 64.5283pt x 43.69135pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 229.
+Package pdftex.def Info: logo.png  used on input line 230.
 (pdftex.def)             Requested size: 48.18282pt x 48.18282pt.
  [11]
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 File: logo-epita.png Graphic file (type png)
 <use logo-epita.png>
-Package pdftex.def Info: logo-epita.png  used on input line 239.
+Package pdftex.def Info: logo-epita.png  used on input line 230.
 (pdftex.def)             Requested size: 64.5283pt x 43.69135pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 239.
+Package pdftex.def Info: logo.png  used on input line 230.
 (pdftex.def)             Requested size: 48.18282pt x 48.18282pt.
- [12]
-(CahierDesCharges.aux) ) 
+[12]
+File: logo-epita.png Graphic file (type png)
+<use logo-epita.png>
+Package pdftex.def Info: logo-epita.png  used on input line 240.
+(pdftex.def)             Requested size: 64.5283pt x 43.69135pt.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 240.
+(pdftex.def)             Requested size: 48.18282pt x 48.18282pt.
+ [13] (CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
  13257 strings out of 493303
  255212 string characters out of 3138691
@@ -939,15 +953,15 @@ Here is how much of TeX's memory you used:
  11825 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,54p,958b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/c
-m-super-t1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx120
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
-Output written on CahierDesCharges.pdf (12 pages, 1133711 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-s
+uper/cm-super-t1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
+fbx1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
+Output written on CahierDesCharges.pdf (13 pages, 1136129 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

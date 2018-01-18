@@ -24,4 +24,5 @@
 \contentsline {section}{\numberline {5}Ressources utilis\IeC {\'e}es}{11}
 \contentsline {subsection}{\numberline {5.1}Le mat\IeC {\'e}riel}{11}
 \contentsline {subsection}{\numberline {5.2}Les logiciels}{11}
-\contentsline {section}{\numberline {6}Conclusion}{12}
+\contentsline {subsection}{\numberline {5.3}Ressources \IeC {\'E}conomiques}{12}
+\contentsline {section}{\numberline {6}Conclusion}{13}
