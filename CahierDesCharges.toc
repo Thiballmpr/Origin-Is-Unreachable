@@ -16,7 +16,7 @@
 \contentsline {paragraph}{}{8}
 \contentsline {section}{\numberline {4}D\IeC {\'e}coupage du projet}{9}
 \contentsline {subsection}{\numberline {4.1}D\IeC {\'e}coupage du jeu: description des diff\IeC {\'e}rentes \newline parties}{9}
-\contentsline {subsection}{\numberline {4.2}R\IeC {\'e}partition des taches}{10}
+\contentsline {subsection}{\numberline {4.2}R\IeC {\'e}partition des t\IeC {\^a}ches}{10}
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{}{10}
 \contentsline {paragraph}{Plus on va vers le rouge plus le niveau d'implication dans le domaine est \IeC {\'e}lev\IeC {\'e}.}{10}
