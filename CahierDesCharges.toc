@@ -1,4 +1,5 @@
 \babel@toc {french}{}
+\contentsline {paragraph}{ Le cahier des charges qui suit a pour but de pr\IeC {\'e}senter le projet du groupe Error 523.\newline }{1}
 \contentsline {section}{\numberline {1}A propos du groupe}{3}
 \contentsline {subsection}{\numberline {1.1}Formation du groupe}{3}
 \contentsline {paragraph}{}{3}
