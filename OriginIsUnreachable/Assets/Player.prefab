@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 136672767227791966}
   - component: {fileID: 23746042818103714}
   - component: {fileID: 114308840581336680}
-  - component: {fileID: 114556563737700406}
   - component: {fileID: 114083814627200920}
   - component: {fileID: 114457661828873908}
   - component: {fileID: 114303626286996574}
@@ -462,17 +461,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114556563737700406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808022671472486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c14c6b4cc319a74b88cc8cdc5ecc90a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114888690857148486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -617,8 +605,8 @@ RectTransform:
   m_Father: {fileID: 4572191831965968}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1.5}
   m_SizeDelta: {x: 0.01, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
