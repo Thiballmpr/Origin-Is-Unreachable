@@ -20,7 +20,7 @@ public class PlayerController : NetworkBehaviour {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 1.5f * vitesse;
         var z = Input.GetAxis("Vertical") *  Time.deltaTime * vitesse;
 
-        transform.Translate(0, 0, z);
-        transform.Rotate(0,x,0);
+        transform.Translate(x, 0, z);
+        //transform.Rotate(0,x,0);
 	}
 }
