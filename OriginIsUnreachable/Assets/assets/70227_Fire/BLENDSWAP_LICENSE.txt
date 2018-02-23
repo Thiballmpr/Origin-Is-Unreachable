@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
-Thank you for downloading "Realistic Particle Fire" by AIOlover
+Thank you for downloading "Fire" by AIOlover
 Released under
 Creative Commons Attribution 3.0
-Downloaded from http://www.blendswap.com/blends/view/49484
+Downloaded from http://www.blendswap.com/blends/view/70227
 
 The following is important licensing information, please keep this file for
 archival and future reference when working with the file. It's important that
@@ -31,8 +31,8 @@ as long as you respect these requirements:
 
 ABOUT THE BLEND:
 
-Ready for Blender 2.63
-Published on: 2012-07-15 14:45:55
+Ready for Blender 2.68
+Published on: 2013-09-20 23:31:01
 
 --------------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ If you find anomalies in this blend or any of the contained files such as:
 	- Uncredited or incorrect use of other CC licensed works.
 	- Some other troubling issues[1].
 
-Please submit a report from  http://www.blendswap.com/blends/view/49484
+Please submit a report from  http://www.blendswap.com/blends/view/70227
 by pressing the red button with the flag, including links and details that serve
 as evidence and can help us to solve any conflicts or issues derived from the
 contents of this file.
