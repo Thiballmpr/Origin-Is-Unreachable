@@ -22,6 +22,5 @@ public class AudioSettings : MonoBehaviour
     {
         audioMasterMixer.SetFloat("EffectsVol", volume);
     }
-
-
+    
 }
