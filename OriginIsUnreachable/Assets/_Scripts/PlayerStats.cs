@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour {
     public int healthbase = 100;
     public int healthax = 100;
 
-	public void applyDamage(int theDamage)
+    public void applyDamage(int theDamage)
     {
         healthbase -= theDamage;
 

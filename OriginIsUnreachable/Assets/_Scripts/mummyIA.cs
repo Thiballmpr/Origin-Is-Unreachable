@@ -15,23 +15,24 @@ public class mummyIA : MonoBehaviour {
     public float damping = 6.0f;
     public float attackRepeatTime = 1.5f;
 
-    public float attackDamage = 34.0f;
+    public int attackDamage = 34;
 
     private float attackTime;
 
     public CharacterController controller;
     public float gravity = 20.0f;
-
-
+    
     private Vector3 moveDirection = Vector3.zero;
-	void Start () {
+    void Start()
+    {
         attackTime = Time.time;
         FindHealth();
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         distance = Vector3.Distance(target.position, transform.position);
 
         if (distance < lookAtDistance)
@@ -42,7 +43,7 @@ public class mummyIA : MonoBehaviour {
             chaseRun();
         else if (distance < chaseRange)
             chase();
-	}
+    }
 
     void lookAt()
     {
@@ -75,8 +76,8 @@ public class mummyIA : MonoBehaviour {
         if (Time.time > attackTime)
         {
             GetComponent<Animator>().Play("Atack_Weaponless");
-            target.SendMessage("ApplyDamage", attackDamage);
             Debug.Log("The enemy has attacked");
+            target.SendMessage("applyDamage", attackDamage);
             attackTime = Time.time + attackRepeatTime;
         }
     }
@@ -92,6 +93,6 @@ public class mummyIA : MonoBehaviour {
 
     void FindHealth()
     {
-        target = GameObject.Find("PlayerStats").GetComponent(PlayerStats).transform;
+        //target = GameObject.Find("PlayerStats").GetComponent(PlayerStats).transform;
     }
 }

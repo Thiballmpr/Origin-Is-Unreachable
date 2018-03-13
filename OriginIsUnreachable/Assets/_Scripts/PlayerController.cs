@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController2 : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     public float speed = 25.0f;
     public float rotationSpeed = 75.0f;
 
     Rigidbody rb;
 
-    void Start(){
+    void Start()
+    {
         rb = this.GetComponent<Rigidbody>();
     }
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         float z = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         float x = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
         transform.Rotate(0, x, 0);
